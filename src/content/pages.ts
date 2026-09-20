@@ -49,7 +49,7 @@ export const pages = {
     path: "/pricing/",
     title: "Pricing & Memberships | Yoga Pod Gainesville",
     description:
-      "Intro offers, monthly and annual memberships, class packs, and Infinity memberships covering both yoga pod and APEX.",
+      "Intro offers, monthly and annual memberships, class packs, and Infinity memberships covering both Yoga Pod and APEX.",
   }),
   northwestSchedule: pageMetaSchema.parse({
     path: "/northwest-schedule/",
@@ -130,6 +130,16 @@ export const pages = {
     path: "/membership-change/thanks/",
     title: "Request Received | Yoga Pod Gainesville",
     description: "We received your membership request and will reply within 4 business days.",
+  }),
+  help: pageMetaSchema.parse({
+    path: "/help/",
+    title: "Account Help | Yoga Pod Gainesville",
+    description: "Need help, have a question, or have feedback for Yoga Pod Gainesville? Send us a note.",
+  }),
+  helpThanks: pageMetaSchema.parse({
+    path: "/help/thanks/",
+    title: "We got your note | Yoga Pod Gainesville",
+    description: "We received your note and a member of our team will write you back.",
   }),
   notFound: pageMetaSchema.parse({
     path: "/404.html",

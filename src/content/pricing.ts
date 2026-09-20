@@ -18,7 +18,7 @@ type Group = {
 };
 
 export const pricingNote =
-  "All purchases are final. No refunds are available for any drop in, class pack, nor membership options.";
+  "All purchases are final. No refunds are available for drop-ins, class packs, or memberships.";
 
 const CANCELLATION =
   "30 day cancellation notice required on all monthly & annual memberships. Monthly membership is a 2 month minimum.";
@@ -50,6 +50,39 @@ export const pricingGroups: Group[] = [
     note: CANCELLATION,
   },
   {
+    id: "infinity",
+    title: "Infinity Membership",
+    lede: "One membership for both Yoga Pod and APEX. Pick the tier that matches how you train.",
+    tiers: [
+      {
+        key: "infinity8x4",
+        name: "Yoga Pod 8 Class + APEX 4 Class",
+        term: "per month",
+        save: "Save $39/mo",
+      },
+      {
+        key: "infinity8x8",
+        name: "Yoga Pod 8 Class + APEX 8 Class",
+        term: "per month",
+        save: "Save $59/mo",
+      },
+      {
+        key: "infinityUnlimited",
+        name: "Yoga Pod Unlimited + APEX Unlimited",
+        term: "per month",
+        save: "Save $79/mo",
+        feature: true,
+      },
+      {
+        key: "infinityAnnual",
+        name: "Yoga Pod Unlimited + APEX Unlimited",
+        term: "per year",
+        save: "Save $629 vs monthly",
+      },
+    ],
+    note: CANCELLATION,
+  },
+  {
     id: "packs",
     title: "Limited Class Options",
     tiers: [
@@ -59,38 +92,5 @@ export const pricingGroups: Group[] = [
       { key: "pack20", name: "20 Class Pack", term: "20 classes" },
     ],
     note: "Class packs never expire and cannot be shared.",
-  },
-  {
-    id: "infinity",
-    title: "Infinity Membership",
-    lede: "One membership, both studios. yoga pod and APEX — pick the tier that matches how you train.",
-    tiers: [
-      {
-        key: "infinity8x4",
-        name: "yoga pod 8 Class + APEX 4 Class",
-        term: "per month",
-        save: "Save $39/mo",
-      },
-      {
-        key: "infinity8x8",
-        name: "yoga pod 8 Class + APEX 8 Class",
-        term: "per month",
-        save: "Save $59/mo",
-      },
-      {
-        key: "infinityUnlimited",
-        name: "yoga pod Unlimited + APEX Unlimited",
-        term: "per month",
-        save: "Save $79/mo",
-        feature: true,
-      },
-      {
-        key: "infinityAnnual",
-        name: "yoga pod Unlimited + APEX Unlimited",
-        term: "per year",
-        save: "Save $629 vs monthly",
-      },
-    ],
-    note: CANCELLATION,
   },
 ];

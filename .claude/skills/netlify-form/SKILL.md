@@ -5,10 +5,10 @@ description: Add or change a cancel, freeze, upgrade, or membership-change field
 
 # Membership forms
 
-`/cancel/`, `/freeze/`, `/upgrade/` and `/downgrade/` post to Netlify, not Arketa. A person still makes the change by hand.
+`/cancel/`, `/freeze/`, `/upgrade/`, `/downgrade/` and `/help/` post to Netlify, not Arketa. A person still reads them by hand.
 
 1. Add or edit the field in `src/content/membership-forms.ts`. The `name` is what Netlify stores. **Never rename an existing name.**
-2. Run `yarn build` so `public/__forms.html` matches and `forms-check` confirms it. Look for `forms-check: 4 forms declared and rendered consistently`.
+2. Run `yarn build` so `public/__forms.html` matches and `forms-check` confirms it. Look for `forms-check: 5 forms declared and rendered consistently`.
 3. Do not hand-edit `__forms.html`.
 
 A 200 on the thank-you page does not prove the field was recorded.

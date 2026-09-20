@@ -96,7 +96,7 @@ not error; the request just arrives with that answer blank. So
 against it, failing if anything is missing.
 
 After changing a form, run `yarn build` and confirm it prints
-`forms-check: 4 forms declared and rendered consistently`.
+`forms-check: 5 forms declared and rendered consistently`.
 
 ## Commands
 

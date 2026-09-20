@@ -3,7 +3,7 @@ import { personSchema } from "@/content/schema";
 export const story = {
   title: "Our Story",
   paragraphs: [
-    "APEX | Yoga Pod exists because of Gainesville—and because of what we learned along the way.",
+    "APEX | Yoga Pod exists because of Gainesville and what we learned along the way.",
     "In 2018, we—Alex and Rae Jarboe—moved to Gainesville with a clear goal: to build a heart-driven, deeply rooted yoga and fitness community in a city that values intention and connection. We put down roots in the Oakview neighborhood and committed to showing up not just as studio owners, but as active members of the Gainesville community.",
     "Yoga Pod began in 2003 as a one-room studio in Boulder, Colorado, founded on the belief that thoughtful movement and breath can change lives. Over the years, the brand grew and evolved, offering invaluable lessons about leadership, scale, and what it truly takes to protect culture and quality in wellness spaces.",
     "Through years of hands-on experience building studios, leading teams, and shaping the brand alongside our partner Dan Carbonell, one truth became clear: this work thrives best when leadership is centralized, present, and rooted in the daily practice itself. That realization sparked a renewed vision—Yoga Pod 2.0—one grounded in centralized ownership, integrity, and long-term care for both people and community.",

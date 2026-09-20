@@ -188,7 +188,7 @@ export const faqSections = [
       {
         question: "Where are APEX classes shown in the app?",
         answer: [
-          "APEX, yoga pod and RITUAL all live in one app now — the RAD App. Open it and switch between studios without logging out.",
+          "APEX, Yoga Pod and RITUAL all live in one app now — the RAD App. Open it and switch between studios without logging out.",
         ],
       },
     ],

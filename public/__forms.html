@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>yoga pod forms</title>
+    <title>Yoga Pod forms</title>
     <meta name="robots" content="noindex" />
   </head>
   <body>
@@ -15,7 +15,7 @@
       <label>Phone<input type="tel" name="phone" /></label>
       <label>Date you would like to cancel<input type="date" name="cancel_date" /></label>
       <label>Why are you cancelling?<select name="reason"></select></label>
-      <label>Instead of cancelling, would you like to put your last payment toward a 10 class package that never expires, for $250?<input type="radio" name="class_pack_offer" /></label>
+      <label>Alternatively, would you like to use your last membership payment toward a 10 class package that never expires, for $250, and authorize that your final bill will be $250?<input type="radio" name="class_pack_offer" /></label>
       <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
       <label>I understand the 30 day notice policy and authorize the billing described above.<input type="radio" name="policy_ack" /></label>
     </form>
@@ -26,7 +26,7 @@
       <label>Your name<input type="text" name="name" /></label>
       <label>Email on your account<input type="email" name="email" /></label>
       <label>Phone<input type="tel" name="phone" /></label>
-      <label>First day of your freeze<input type="date" name="freeze_start" /></label>
+      <label>Date you would like to start the freeze<input type="date" name="freeze_start" /></label>
       <label>Date you will return<input type="date" name="freeze_return" /></label>
       <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
     </form>
@@ -49,6 +49,15 @@
       <label>Phone<input type="tel" name="phone" /></label>
       <label>Change my account to<input type="radio" name="downgrade_to" /></label>
       <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
+    </form>
+
+    <form name="account-help" method="POST" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="account-help" />
+      <p hidden><label>Do not fill this in <input name="company" /></label></p>
+      <label>Your name<input type="text" name="name" /></label>
+      <label>Email on your account<input type="email" name="email" /></label>
+      <label>Phone<input type="tel" name="phone" /></label>
+      <label>Share what's on your mind<textarea name="message"></textarea></label>
     </form>
   </body>
 </html>

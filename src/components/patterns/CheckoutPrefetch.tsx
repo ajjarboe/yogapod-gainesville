@@ -236,7 +236,7 @@ export function CheckoutPrefetch({ children }: { children: ReactNode }) {
         <div className="checkout-warm-bar">
           <div className="checkout-warm-actions">
             <button className="btn btn-ghost" type="button" onClick={closeCheckout}>
-              Back to yoga pod
+              Back to Yoga Pod
             </button>
           </div>
         </div>

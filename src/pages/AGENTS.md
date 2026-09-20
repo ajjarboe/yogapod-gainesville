@@ -26,6 +26,8 @@ Public URLs are inherited from the old Squarespace site. Do not rename one witho
 | `/freeze/` | `freeze.tsx` | `FreezePage.tsx` |
 | `/upgrade/` | `upgrade.tsx` | `UpgradePage.tsx` |
 | `/downgrade/` | `downgrade.tsx` | `DowngradePage.tsx` |
+| `/help/` | `help.tsx` | `HelpPage.tsx` |
+| `/help/thanks/` | `helpThanks.tsx` | `HelpThanksPage.tsx` |
 | `404.html` | `notFound.tsx` | `NotFoundPage.tsx` |
 
 Both schedule pages render the shared `SchedulePage`; the only difference is which studio. The four request forms all render `MembershipForm` and differ only by content.

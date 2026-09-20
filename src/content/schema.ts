@@ -86,6 +86,10 @@ export const membershipFormSchema = z.object({
   terms: z.array(z.string()),
   submit: z.string(),
   fields: z.array(formFieldSchema),
+  /** Where the browser goes after a successful send. Defaults to the membership thank-you. */
+  thanks: z.string().optional(),
+  /** Line under the send button. Defaults to the membership confirmation note. */
+  note: z.string().optional(),
 });
 
 export type FormField = z.infer<typeof formFieldSchema>;

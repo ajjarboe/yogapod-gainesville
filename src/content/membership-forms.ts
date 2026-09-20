@@ -68,6 +68,7 @@ export const cancelForm = membershipFormSchema.parse({
   lede: "We are sorry to see you go. Tell us when, and we will take it from there.",
   terms: [
     "Memberships require **30 days notice** to cancel. If you are billed on the 8th and you submit this on the 15th, your final payment still runs on the 8th of next month, with nothing after that.",
+    "Monthly and annual contracts both require 30 days notice. There are no early cancellations or refunds for annual contracts, even if you are moving.",
     "Cancellations are not permitted directly following a freeze.",
   ],
   submit: "Send cancellation request",
@@ -89,19 +90,19 @@ export const cancelForm = membershipFormSchema.parse({
       options: [
         { label: "Select a reason", value: "" },
         { label: "I'm moving", value: "Moving" },
-        { label: "The schedule is not right for me", value: "Schedule" },
+        { label: "Studio schedule is not right for me", value: "Schedule" },
         { label: "No time to attend classes", value: "No time" },
-        { label: "Other — I'll explain below", value: "Other" },
+        { label: "Other (please include below)", value: "Other" },
       ],
     }),
     formFieldSchema.parse({
       name: "class_pack_offer",
       id: "f-offer",
       label:
-        "Instead of cancelling, would you like to put your last payment toward a 10 class package that never expires, for $250?",
+        "Alternatively, would you like to use your last membership payment toward a 10 class package that never expires, for $250, and authorize that your final bill will be $250?",
       type: "radio",
       required: true,
-      hint: "Choosing yes means your final bill is $250 and the classes stay on your account indefinitely.",
+      hint: "Choosing yes means those 10 classes stay on your account and never expire.",
       options: [
         { label: "Yes, send me the details", value: "Yes" },
         { label: "No thanks", value: "No" },
@@ -131,6 +132,7 @@ export const freezeForm = membershipFormSchema.parse({
   lede: "We will miss you while you're away. Tell us the dates and we will hold your spot.",
   terms: [
     "Your membership dues continue while your account is frozen. When you come back, your dues are **$0.00 for the same length of time** you were away.",
+    "Freezes run **bill date to bill date** — for example August 1st to September 1st, or August 1st to December 1st. We do not allow partial-month freezes.",
     "Cancellations are not permitted directly following a freeze.",
     `Want to come back early? Email [${leadershipEmail}](mailto:${leadershipEmail}) with your new return date.`,
   ],
@@ -140,9 +142,10 @@ export const freezeForm = membershipFormSchema.parse({
     formFieldSchema.parse({
       name: "freeze_start",
       id: "f-start",
-      label: "First day of your freeze",
+      label: "Date you would like to start the freeze",
       type: "date",
       required: true,
+      hint: "Use your billing date, not a day in the middle of the month.",
     }),
     formFieldSchema.parse({
       name: "freeze_return",
@@ -150,6 +153,7 @@ export const freezeForm = membershipFormSchema.parse({
       label: "Date you will return",
       type: "date",
       required: true,
+      hint: "Also a billing date. The freeze lasts from start date to this date.",
     }),
     feedback,
   ],
@@ -208,7 +212,7 @@ export const downgradeForm = membershipFormSchema.parse({
       type: "radio",
       required: true,
       options: [
-        { label: "yoga pod Monthly Unlimited", value: "yoga pod Monthly Unlimited" },
+        { label: "Yoga Pod Monthly Unlimited", value: "Yoga Pod Monthly Unlimited" },
         { label: "8 classes a month", value: "8 classes a month" },
         { label: "Not sure — help me pick", value: "Undecided" },
       ],
@@ -217,7 +221,38 @@ export const downgradeForm = membershipFormSchema.parse({
   ],
 });
 
+export const helpForm = membershipFormSchema.parse({
+  key: "help",
+  name: "account-help",
+  path: "/help/",
+  eyebrow: "Account help",
+  title: "Need help?",
+  lede: "Have a question or feedback for us? Send a note and someone from the studio will write you back.",
+  terms: [],
+  submit: "Send",
+  thanks: "/help/thanks/",
+  note: `A real person reads this and replies ${responseWindow}.`,
+  fields: [
+    ...identity,
+    formFieldSchema.parse({
+      name: "message",
+      id: "f-message",
+      label: "Share what's on your mind",
+      type: "textarea",
+      required: true,
+      placeholder: "A question, a note, or something we should hear.",
+    }),
+  ],
+});
+
+export const helpCard = {
+  href: helpForm.path,
+  title: "Share your feedback",
+  blurb: "A question, a note, or something we should hear.",
+};
+
 export const membershipForms = [cancelForm, freezeForm, upgradeForm, downgradeForm];
+export const siteForms = [...membershipForms, helpForm];
 
 /** The hub tiles, in the order the old site listed them. */
 export const membershipOptions = [

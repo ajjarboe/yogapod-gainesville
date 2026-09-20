@@ -3,6 +3,7 @@ export const culture = {
     "At Yoga Pod, we commit to breathe first and act second. We cultivate discipline through the rigor, heat, and focus of our practice. Through infectious, positive attitude and culture, we create community and build an impactful tribe. We strive to live in harmony with nature, and our open, compassionate hearts guide us to do the right thing.",
     "Our shared intention is our guiding beacon. We invite you to come as you are, and leave feeling refreshed and inspired.",
   ],
+  valuesTitle: "Our Values",
   values: ["Breathe First", "Cultivate Discipline", "Create Community", "Honor Nature", "Do the Right Thing"],
   blocks: [
     {

@@ -9,11 +9,12 @@ export function CulturePage() {
       <PageHeader eyebrow="About" title="Our Culture" lede={culture.intro[0]} />
 
       <section className="band">
-        <div className="shell-narrow">
-          <p className="lede">{culture.intro[1]}</p>
+        <div className="shell">
+          <h2 className="display-md">{culture.valuesTitle}</h2>
+          <p className="lede mt-5">{culture.intro[1]}</p>
           <div className="meta-row mt-8">
             {culture.values.map((value) => (
-              <span key={value} className="chip">
+              <span key={value} className="chip chip-lg">
                 {value}
               </span>
             ))}

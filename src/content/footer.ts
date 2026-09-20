@@ -34,6 +34,7 @@ export const footer = {
         { href: "/teacher-training/", label: "Teacher Training" },
         { href: "/workshops/", label: "Workshops" },
         { href: "/faq/", label: "FAQ" },
+        { href: "/help/", label: "Account Help" },
         { href: "/careers/", label: "Careers" },
         { href: "/membership-change/", label: "Account Management" },
       ],

@@ -9,7 +9,7 @@ Push to `main` will publish once a Netlify site exists. Prefer a **preview** fir
 ## Before you promote
 
 1. `yarn lint && yarn typecheck && yarn build`
-2. Confirm the build printed `forms-check: 4 forms declared and rendered consistently`.
+2. Confirm the build printed `forms-check: 5 forms declared and rendered consistently`.
 3. Confirm `checkout-check` passed.
 4. Deploy a preview.
 5. Curl the preview:
@@ -27,16 +27,16 @@ curl -sI "$PREVIEW/downgrade/" | head -n 1
 curl -sI "$PREVIEW/membership-change/" | head -n 1
 curl -sI "$PREVIEW/membership-change/thanks/" | head -n 1
 curl -sI "$PREVIEW/account" | head -n 5
-curl -sI "$PREVIEW/help" | head -n 5
+curl -sI "$PREVIEW/help/" | head -n 1
 curl -sI "$PREVIEW/30" | head -n 5
 curl -sI "$PREVIEW/intro" | head -n 5
 curl -sI "$PREVIEW/unlimited" | head -n 5
 curl -sI "$PREVIEW/annual" | head -n 5
 ```
 
-Marketing pages and the four request pages should be 200. `/account` should 301 to `/membership-change/`. `/help` should 301 to `/faq/`. `/30` `/intro` `/unlimited` `/annual` should 302 to Arketa.
+Marketing pages, the four request pages, and `/help/` should be 200. `/account` should 301 to `/membership-change/`. `/30` `/intro` `/unlimited` `/annual` should 302 to Arketa.
 
-6. Submit one cancel with name `PREVIEW TEST` and confirm it in Netlify → Forms → `membership-cancel`. Repeat once each for freeze, upgrade, and downgrade. A 200 on the thank-you page does not prove it was recorded.
+6. Submit one cancel with name `PREVIEW TEST` and confirm it in Netlify → Forms → `membership-cancel`. Repeat once each for freeze, upgrade, downgrade, and help (`account-help`). A 200 on the thank-you page does not prove it was recorded.
 7. Only then merge or promote.
 
 ## Do not

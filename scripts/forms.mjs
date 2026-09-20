@@ -23,7 +23,7 @@ let forms;
 let honeypot;
 try {
   const mod = await vite.ssrLoadModule("/src/content/membership-forms.ts");
-  forms = mod.membershipForms;
+  forms = mod.siteForms;
   honeypot = mod.honeypot;
 } finally {
   await vite.close();
@@ -53,7 +53,7 @@ const html = `<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>yoga pod forms</title>
+    <title>Yoga Pod forms</title>
     <meta name="robots" content="noindex" />
   </head>
   <body>

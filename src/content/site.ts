@@ -1,6 +1,6 @@
 export const site = {
   siteUrl: "https://www.yogapodgainesville.com",
-  brand: "yoga pod Gainesville",
+  brand: "Yoga Pod Gainesville",
   brandFull: "APEX | Yoga Pod Gainesville",
   tagline: "Come as you are. Leave feeling refreshed and inspired.",
   email: "info@yogapod.com",
@@ -17,7 +17,7 @@ export const site = {
   app: {
     name: "RAD App",
     blurb:
-      "One app for yoga pod, APEX and RITUAL. Book classes, manage your account, and switch between studios.",
+      "One app for Yoga Pod, APEX and RITUAL. Book classes, manage your account, and switch between studios.",
     androidNote: "Same email as Yoga Pod. Tap Forgot Password to set a new one.",
   },
 } as const;

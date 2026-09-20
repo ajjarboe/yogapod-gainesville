@@ -50,6 +50,8 @@ const pages = [
   { file: "dist/freeze/index.html", mod: "/src/pages/FreezePage.tsx", exp: "FreezePage" },
   { file: "dist/upgrade/index.html", mod: "/src/pages/UpgradePage.tsx", exp: "UpgradePage" },
   { file: "dist/downgrade/index.html", mod: "/src/pages/DowngradePage.tsx", exp: "DowngradePage" },
+  { file: "dist/help/index.html", mod: "/src/pages/HelpPage.tsx", exp: "HelpPage" },
+  { file: "dist/help/thanks/index.html", mod: "/src/pages/HelpThanksPage.tsx", exp: "HelpThanksPage" },
   { file: "dist/404.html", mod: "/src/pages/NotFoundPage.tsx", exp: "NotFoundPage" },
 ];
 

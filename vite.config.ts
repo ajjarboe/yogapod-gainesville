@@ -41,6 +41,8 @@ export default defineConfig({
         freeze: path.resolve(root, "freeze/index.html"),
         upgrade: path.resolve(root, "upgrade/index.html"),
         downgrade: path.resolve(root, "downgrade/index.html"),
+        help: path.resolve(root, "help/index.html"),
+        helpThanks: path.resolve(root, "help/thanks/index.html"),
         notFound: path.resolve(root, "404.html"),
       },
     },

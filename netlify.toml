@@ -69,11 +69,6 @@
   status = 301
 
 [[redirects]]
-  from = "/help"
-  to = "/faq/"
-  status = 301
-
-[[redirects]]
   from = "/popup"
   to = "/"
   status = 301

@@ -17,6 +17,7 @@ const routes = [
   { page: "freeze", form: "membership-freeze" },
   { page: "upgrade", form: "membership-upgrade" },
   { page: "downgrade", form: "membership-downgrade" },
+  { page: "help", form: "account-help" },
 ];
 
 const read = (file) => readFileSync(path.join(dist, file), "utf8");

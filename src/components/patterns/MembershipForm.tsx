@@ -47,8 +47,17 @@ function Field({ field }: { field: FormField }) {
   if (field.type === "textarea") {
     return (
       <div className="rfield">
-        <label htmlFor={field.id}>{field.label}</label>
-        <textarea id={field.id} name={field.name} rows={4} placeholder={field.placeholder} />
+        <label htmlFor={field.id}>
+          {field.label}
+          {required}
+        </label>
+        <textarea
+          id={field.id}
+          name={field.name}
+          rows={4}
+          placeholder={field.placeholder}
+          required={field.required}
+        />
       </div>
     );
   }
@@ -77,7 +86,7 @@ function Field({ field }: { field: FormField }) {
  *  entirely from src/content/membership-forms.ts. */
 export function MembershipForm({ form }: { form: MembershipFormContent }) {
   return (
-    <NetlifyForm name={form.name} honeypot={honeypot} action={thanksPath} className="rform">
+    <NetlifyForm name={form.name} honeypot={honeypot} action={form.thanks ?? thanksPath} className="rform">
       {form.fields.map((field) => (
         <Field key={field.name} field={field} />
       ))}
@@ -85,8 +94,8 @@ export function MembershipForm({ form }: { form: MembershipFormContent }) {
         {form.submit}
       </button>
       <p className="fineprint">
-        A real person reads this and replies {responseWindow}. Nothing changes on your account until we
-        confirm it with you.
+        {form.note ??
+          `A real person reads this and replies ${responseWindow}. Nothing changes on your account until we confirm it with you.`}
       </p>
     </NetlifyForm>
   );
