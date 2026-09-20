@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>yoga pod forms</title>
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <!-- Generated from src/content/membership-forms.ts. Do not hand-edit. yarn forms -->
+    <form name="membership-cancel" method="POST" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="membership-cancel" />
+      <p hidden><label>Do not fill this in <input name="company" /></label></p>
+      <label>Your name<input type="text" name="name" /></label>
+      <label>Email on your account<input type="email" name="email" /></label>
+      <label>Phone<input type="tel" name="phone" /></label>
+      <label>Date you would like to cancel<input type="date" name="cancel_date" /></label>
+      <label>Why are you cancelling?<select name="reason"></select></label>
+      <label>Instead of cancelling, would you like to put your last payment toward a 10 class package that never expires, for $250?<input type="radio" name="class_pack_offer" /></label>
+      <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
+      <label>I understand the 30 day notice policy and authorize the billing described above.<input type="radio" name="policy_ack" /></label>
+    </form>
+
+    <form name="membership-freeze" method="POST" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="membership-freeze" />
+      <p hidden><label>Do not fill this in <input name="company" /></label></p>
+      <label>Your name<input type="text" name="name" /></label>
+      <label>Email on your account<input type="email" name="email" /></label>
+      <label>Phone<input type="tel" name="phone" /></label>
+      <label>First day of your freeze<input type="date" name="freeze_start" /></label>
+      <label>Date you will return<input type="date" name="freeze_return" /></label>
+      <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
+    </form>
+
+    <form name="membership-upgrade" method="POST" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="membership-upgrade" />
+      <p hidden><label>Do not fill this in <input name="company" /></label></p>
+      <label>Your name<input type="text" name="name" /></label>
+      <label>Email on your account<input type="email" name="email" /></label>
+      <label>Phone<input type="tel" name="phone" /></label>
+      <label>Upgrade my account to<input type="radio" name="upgrade_to" /></label>
+      <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
+    </form>
+
+    <form name="membership-downgrade" method="POST" data-netlify="true" netlify-honeypot="company">
+      <input type="hidden" name="form-name" value="membership-downgrade" />
+      <p hidden><label>Do not fill this in <input name="company" /></label></p>
+      <label>Your name<input type="text" name="name" /></label>
+      <label>Email on your account<input type="email" name="email" /></label>
+      <label>Phone<input type="tel" name="phone" /></label>
+      <label>Change my account to<input type="radio" name="downgrade_to" /></label>
+      <label>Anything you would like us to know?<textarea name="feedback"></textarea></label>
+    </form>
+  </body>
+</html>

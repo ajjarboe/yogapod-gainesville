@@ -1,0 +1,19 @@
+/* yoga pod Gainesville palette — carried over from the studio brand.
+   yoga pod's own. Not the RAD palette, not RITUAL's. Do not copy this file to
+   rad-collective-site, rad-ops-playbook, or ritual-gainesville, and do not copy
+   theirs here.
+   Nowhere else in this repo may contain a hex. Mix in theme.css. */
+:root {
+  /* The blue. Carried over exactly from the studio signage and the old site. */
+  --pod-blue: #2596be;
+  --pod-blue-deep: #14607d;
+  --pod-blue-light: #4fc1e9;
+
+  /* Neutrals — soft ink through warm bone */
+  --pod-ink: #14181a;
+  --pod-bone: #f5f2ec;
+  --pod-white: #ffffff;
+
+  /* Warm — the studio tan */
+  --pod-sand: #cdc0b1;
+}

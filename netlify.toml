@@ -1,0 +1,122 @@
+# yogapodgainesville.com — Netlify configuration
+# Version-controlled so deploy settings cannot drift in the dashboard.
+
+[build]
+  command = "yarn build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# ---------------------------------------------------------------------------
+# Squarespace URLs this rebuild drops. Members still have these in old emails
+# and bookmarks, so every one of them lands somewhere useful rather than 404.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/our-classes/"
+  status = 301
+
+[[redirects]]
+  from = "/education"
+  to = "/teacher-training/"
+  status = 301
+
+[[redirects]]
+  from = "/book-now"
+  to = "/northwest-schedule/"
+  status = 301
+
+[[redirects]]
+  from = "/schedule-1"
+  to = "/northwest-schedule/"
+  status = 301
+
+[[redirects]]
+  from = "/mindbody"
+  to = "/northwest-schedule/"
+  status = 301
+
+[[redirects]]
+  from = "/northwest-events"
+  to = "/events/"
+  status = 301
+
+[[redirects]]
+  from = "/southwest-events"
+  to = "/events/"
+  status = 301
+
+[[redirects]]
+  from = "/open-house"
+  to = "/events/"
+  status = 301
+
+[[redirects]]
+  from = "/challenge"
+  to = "/events/"
+  status = 301
+
+[[redirects]]
+  from = "/info-sessions-schedule"
+  to = "/teacher-training/"
+  status = 301
+
+[[redirects]]
+  from = "/help"
+  to = "/faq/"
+  status = 301
+
+[[redirects]]
+  from = "/popup"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/cart"
+  to = "/pricing/"
+  status = 301
+
+# Membership self-service. /cancel, /freeze, /upgrade and /downgrade are real
+# pages again, rebuilt from the Squarespace forms, so they need no redirect.
+# The hub also answers to the shorter /account.
+[[redirects]]
+  from = "/account"
+  to = "/membership-change/"
+  status = 301
+
+# ---------------------------------------------------------------------------
+# Ad and email short links. Ids must match src/content/checkout.ts —
+# scripts/checkout-check.mjs fails the build if they drift.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/30"
+  to = "https://app.arketa.co/gnv/pricing/checkout/5LS7ZXkhbVeY0DbWZhwX"
+  status = 302
+
+[[redirects]]
+  from = "/intro"
+  to = "https://app.arketa.co/gnv/pricing/checkout/5LS7ZXkhbVeY0DbWZhwX"
+  status = 302
+
+[[redirects]]
+  from = "/unlimited"
+  to = "https://app.arketa.co/gnv/pricing/checkout/5A4zHLacqzo6BCkATwL3"
+  status = 302
+
+[[redirects]]
+  from = "/annual"
+  to = "https://app.arketa.co/gnv/pricing/checkout/OUfb2IfyY5PoG3VvhrCp"
+  status = 302
+
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404

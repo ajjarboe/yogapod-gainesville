@@ -1,0 +1,15 @@
+# build output
+dist/
+.yarn/*
+!.yarn/releases
+.pnp.*
+
+# local scratch
+work/
+shots/
+node_modules/
+.netlify/
+.DS_Store
+*.log
+*.local
+.cursor/
