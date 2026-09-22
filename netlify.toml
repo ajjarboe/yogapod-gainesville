@@ -111,6 +111,14 @@
   to = "https://app.arketa.co/gnv/pricing/checkout/OUfb2IfyY5PoG3VvhrCp"
   status = 302
 
+# Hiring for every RAD studio runs through one application on radcollective.us.
+# force = true because a /careers/ page still ships and would otherwise win.
+[[redirects]]
+  from = "/careers"
+  to = "https://radcollective.us/apply/"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/*"
   to = "/404.html"
