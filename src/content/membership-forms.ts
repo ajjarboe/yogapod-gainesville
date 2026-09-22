@@ -7,7 +7,7 @@ export const thanksPath = "/membership-change/thanks/";
 export const honeypot = "company";
 
 /** Staff address for the early-return request called out in the freeze copy. */
-export const leadershipEmail = "gnv.leadership@yogapod.com";
+export const leadershipEmail = "leadership@radcollective.us";
 
 /** How long the studio takes to answer any of these. Stated on every form so
  *  nobody submits twice thinking it failed. */
