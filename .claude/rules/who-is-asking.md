@@ -10,6 +10,7 @@ They are talking to **Claude**, not Cursor. This site is built. Additions come f
 - If two jobs fit, do the smaller one (change the words, not the page).
 - Do not explore the repo for a new way to style. Do not ask them to name a file.
 - Talk back in plain language.
+- They do not know git. You pull the latest `main`, make a branch, commit, and open a pull request for them — **Saving changes** in `AGENTS.md`. Never commit or push to `main`.
 
 ```
 ❌ “Should I add a new token in theme.css or restyle PriceCard?”

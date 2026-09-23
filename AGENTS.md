@@ -112,6 +112,38 @@ After changing a form, run `yarn build` and confirm it prints
 - Public URL paths, without saying out loud that search rankings and old email links will break
 - The RAD and RITUAL palettes
 
+## Saving changes (git)
+
+The person asking does not know git. **You** run every step; never ask them to type a command, name a branch, or write a commit message. **Never commit or push to `main`** — merging into `main` puts the site live, so it only happens through a pull request someone reviews.
+
+**Before you change anything**
+
+1. `git status`. If it shows edits you did not make, say what they are in plain words and ask: “These edits were never saved. Include them in this update, or set them aside?” To set them aside: `git stash -u -m 'set aside'`, and tell them nothing was deleted.
+2. Start a new branch from the latest `main`:
+
+```bash
+git switch main
+git pull --ff-only origin main
+git switch -c unlimited-179     # short name for the change
+```
+
+Skip step 2 for a follow-up in the same conversation — keep your branch, unless the new request is unrelated or its pull request is already merged or closed.
+
+**After the change, once lint, typecheck, and build pass**
+
+3. `git add` each file this request changed, including files a command regenerated (like `public/__forms.html`). Not `git add -A`. Check `git status` shows nothing else.
+4. `git commit -m 'Raise the unlimited membership to $179.'` — one plain sentence, like the history. Use single quotes here and in the pull request: inside double quotes, the shell mangles or drops `$179`.
+5. `git push -u origin HEAD`
+6. No pull request for this branch yet? Open one: `gh pr create --base main --title '…' --body '…'`. In the body, say what changed in plain words and flag anything a human should double-check (a price, a checkout id, a form field, a public URL). If `gh` is missing or not signed in, give them `https://github.com/ajjarboe/yogapod-gainesville/pull/new/<branch>` instead.
+7. Send them the link and say: “Your change is saved and waiting for review. It isn't live until someone approves and merges it.” If Netlify posted a preview link on the pull request, share that too.
+
+**Never**
+
+- Commit or push to `main`, or merge a pull request yourself. If they ask to go live, run the checks in `.github/DEPLOY.md`, then tell them the pull request is ready to merge.
+- Force-push, `git reset --hard`, delete a branch, or create a GitHub token.
+
+**If git pushes back** — a conflict, a failed `--ff-only` pull, a rejected push, or a password or sign-in prompt — stop. Nothing is lost. Tell them in plain words that someone who knows git needs to take a look.
+
 ## Done
 
-`yarn lint` and `yarn typecheck` pass, and `yarn build` completes. If you touched a price, a checkout id, or a public path, say so plainly so a human can double-check before it ships.
+`yarn lint` and `yarn typecheck` pass, and `yarn build` completes. If you touched a price, a checkout id, or a public path, say so plainly so a human can double-check before it ships. The change is committed on its own branch with a pull request open — never on `main`.

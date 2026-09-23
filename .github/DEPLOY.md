@@ -4,7 +4,7 @@ They will say “go live”, “deploy”, or “the form is broken” — not �
 
 Live (today): **https://www.yogapodgainesville.com** is still Squarespace. This rebuild has no Netlify site yet. Create the Netlify site and point DNS only when a human asks.
 
-Push to `main` will publish once a Netlify site exists. Prefer a **preview** first if you touched a form, a public path, or checkout short links.
+Merging a pull request into `main` will publish once a Netlify site exists. Never push to `main` directly — see **Saving changes** in `AGENTS.md`. Prefer a **preview** first if you touched a form, a public path, or checkout short links.
 
 ## Before you promote
 
