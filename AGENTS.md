@@ -46,6 +46,24 @@ They are in **Claude**. Always-on and path rules live alongside the code as `AGE
 | “change the cancel form” / “ask them for their end date” | membership request forms | `src/content/membership-forms.ts`, then `yarn forms` |
 | “a member says they cancelled but we never got it” | a form field Netlify never registered | run `yarn build` — `forms-check` names the field |
 
+## House brand rules
+
+These are shared by every RAD Collective site. Follow them in every word you write or change: page copy, headings, alt text, page titles, commit messages, and pull request text.
+
+1. **Brand order** is always APEX, then RITUAL, then yoga pod, anywhere they appear together.
+2. The name is **RAD Collective**, never “The RAD Collective”. The short form is **RAD Co**.
+3. APEX teaches **Xformer** pilates, not reformer. The wording is “Xformer pilates and strength”.
+4. **yoga pod** is lowercase in brand copy.
+5. The address for all brands is **4136 NW 16th Blvd** (front desk). RITUAL is technically suite 4138, but every site and listing uses 4136.
+6. RITUAL copy:
+   - The room cap is **22 an hour** (never 26).
+   - Content sessions happen about once a month, so no copy should read as an absolute phone or filming ban.
+   - Sanctuary copy leads with what RITUAL cultivates (elevated conversation, conscious awareness, respect, reverence), not a list of don’ts.
+   - Founding members open **November 1**. The public grand opening is **November 6**.
+7. **American spelling.**
+
+If a request would break one of these, say so in plain words before you change anything. If you notice existing copy that breaks one, mention it instead of fixing it unasked.
+
 ## How to build (the patterns from this repo)
 
 1. Change **copy** in `src/content/` as data. No JSX, no `className`. Bold with `**like this**`. Italic with `*like this*`. Links with `[label](href)`.
