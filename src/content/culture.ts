@@ -19,12 +19,8 @@ export const culture = {
       body: "Our philosophy is rooted in the science of flow state, where you achieve a heightened state of focus and attention. Achieve physical, mental, and spiritual fitness through our comprehensive yoga and strength training classes. Increase body awareness, elevate your personal growth, and decrease your stress levels.",
     },
     {
-      title: "Diversity, Equity & Inclusion",
-      body: "At yoga pod, we break the box that society puts us in. We believe that Yoga is for everyone and anyone. You do not have to look or feel a certain way to practice with us. In that, we are committed to diversity and inclusion to expand the variety of students who walk through our doors. We are redefining the status quo surrounding Yoga by fostering an open space that aligns with our core values. This mission wholeheartedly begins with educating ourselves, and holding space for those underrepresented or unseen, as we sweat, breathe, and grow together.",
-    },
-    {
       title: "Locally Owned + Operated",
-      body: "yoga pod is a locally owned and operated business, where owners Alex & Rachel Jarboe and Dan Carbonell redefine fitness and help students forge a sustainable, intentional practice through breath, strength, and sweat. Our practice informs our purpose in business. We can't wait to welcome you to your first experience.",
+      body: "yoga pod is a locally owned and operated business, where owners Alex & Rae Jarboe and Dan Carbonell redefine fitness and help students forge a sustainable, intentional practice through breath, strength, and sweat. Our practice informs our purpose in business. We can't wait to welcome you to your first experience.",
     },
   ],
   principlesIntro:

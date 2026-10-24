@@ -14,7 +14,7 @@ export const home = {
     items: [
       {
         title: "Every level",
-        body: "BASICS and FLOW 1 if you are brand new. FLOW 2, HOT, and FIT when you want to be worked. Nobody starts at the top.",
+        body: "HOT, FLOW 1, or FIT are the easiest places to land. All are beginner friendly. Nobody starts at the top.",
       },
       {
         title: "Built for comfort",
