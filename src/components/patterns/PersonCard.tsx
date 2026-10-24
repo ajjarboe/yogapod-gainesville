@@ -19,7 +19,17 @@ export function PersonCard({ person }: { person: Person }) {
       ) : null}
       <p className="person-name">{person.name}</p>
       <p className="person-role">{person.role}</p>
-      {person.bio?.length ? <Disclose summary="Read bio" paragraphs={person.bio} /> : null}
+      {person.bio?.length || person.classes?.length ? (
+        <Disclose
+          summary="Read bio"
+          paragraphs={person.bio ?? []}
+          list={
+            person.classes?.length
+              ? { title: `Take class with ${person.name.split(" ")[0]}:`, items: person.classes }
+              : undefined
+          }
+        />
+      ) : null}
     </div>
   );
 }

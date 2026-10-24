@@ -44,6 +44,8 @@ export const personSchema = z.object({
   /** Path stem under /img/team/. Sizes 400 and 800 must exist. */
   photo: z.string().optional(),
   bio: z.array(z.string()).optional(),
+  /** Regular classes, one bullet each, e.g. "**FLOW 2**: Saturdays 10am (NW)". Shown under the bio. */
+  classes: z.array(z.string()).optional(),
 });
 
 export const faqItemSchema = z.object({
