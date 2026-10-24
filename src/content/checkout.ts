@@ -119,8 +119,10 @@ export const locationIds = {
 
 export type LocationKey = keyof typeof locationIds;
 
-export function scheduleSrc(location: LocationKey) {
-  return `${ARKETA_SCHEDULE_IFRAME}?serviceId=${SERVICE_IDS}&location=${locationIds[location]}`;
+/** Leave out the location to show both studios in one schedule (the Book Now page). */
+export function scheduleSrc(location?: LocationKey) {
+  const base = `${ARKETA_SCHEDULE_IFRAME}?serviceId=${SERVICE_IDS}`;
+  return location ? `${base}&location=${locationIds[location]}` : base;
 }
 
 export function eventsSrc() {

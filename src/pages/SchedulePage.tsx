@@ -6,8 +6,11 @@ import { pages } from "@/content/pages";
 import { site } from "@/content/site";
 import { studios } from "@/content/studios";
 
-/** Both schedule routes render this. The only difference is which studio. */
-export function SchedulePage({ location }: { location: LocationKey }) {
+/**
+ * Both schedule routes render this. Book Now lands on the Northwest route, so that one
+ * shows both studios together (`bothStudios`); the Southwest route shows Southwest only.
+ */
+export function SchedulePage({ location, bothStudios = false }: { location: LocationKey; bothStudios?: boolean }) {
   const studio = studios.find((item) => item.key === location);
   if (!studio) throw new Error(`unknown studio: ${location}`);
 
@@ -18,7 +21,7 @@ export function SchedulePage({ location }: { location: LocationKey }) {
     <SiteChrome path={meta.path}>
       <PageHeader
         eyebrow="Schedule"
-        title={studio.name}
+        title={bothStudios ? "Northwest & Southwest Schedules Below" : studio.name}
         lede="Choose from over 200 classes each week between our two studios."
       >
         <a className="btn btn-ghost" href={`tel:${studio.phoneRaw}`}>
@@ -38,7 +41,11 @@ export function SchedulePage({ location }: { location: LocationKey }) {
         <div className="shell">
           <p className="text-right text-sm text-muted">{site.app.androidNote}</p>
           <div className="mt-6">
-            <BookingFrame src={scheduleSrc(location)} title={`${studio.name} class schedule`} priority />
+            <BookingFrame
+              src={bothStudios ? scheduleSrc() : scheduleSrc(location)}
+              title={bothStudios ? "yoga pod Northwest and Southwest class schedule" : `${studio.name} class schedule`}
+              priority
+            />
           </div>
         </div>
       </section>
