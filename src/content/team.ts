@@ -36,8 +36,8 @@ export const ownership = [
   personSchema.parse({ photo: "dan-carbonell", name: "Dan Carbonell", role: "Owner" }),
 ];
 
+/** Leadership Team, matching the leadership list on radhq.us. */
 export const directors = [
-  personSchema.parse({ photo: "amanda-allen", name: "Amanda Allen", role: "Director of Infrastructure" }),
   personSchema.parse({
     photo: "emily-tharp-pendley",
     name: "Emily Tharp Pendley",
@@ -50,17 +50,54 @@ export const directors = [
     ],
   }),
   personSchema.parse({
-    photo: "sage-schaefer",
-    name: "Sage Schaefer",
-    role: "Director of Design",
+    photo: "amanda-allen",
+    name: "Amanda Allen",
+    role: "Program & Facilities Director",
     bio: [
-      "Sage is the Director of Design at APEX | yoga pod and serves as a faculty lead for FIT, HOT, and YIN teacher trainings. She joined the team as a Karma Yogi in 2022 and has steadily progressed into the Leadership team, driven by passion for what we do and who we do it for. In addition to serving our studio community in the front of house and on the mat, Sage holds it down behind-the-scenes as the lead curator of the studio's creative and marketing materials and supports operations through staff training and back-end system development.",
-      "Sage has been practicing yoga for nearly 10 years, with hot yoga being her first love, and yin yoga a close second. Upon moving to Gainesville in 2019, seeking out a hot yoga studio was a priority — and she found the perfect place at yoga pod. While she tries to incorporate all of our class styles into her routine, she especially loves the HOT practice for the consistent challenge, Beatz for the bumpin' tunes, and YIN for the introspective pause.",
-      "Sage is especially passionate about the mental health benefits of yoga and the constant learning and growth involved in creating an inclusive wellness space, and shares this with the studio community as a lead for FIT, HOT, and YIN teacher trainings. Sharing her love for the practice, helping blossoming teachers find their voice, and creating a safe space for students of all walks of life is a gift.",
-      "Outside of the studio, you can find Sage reading a new book, vibing at a concert, playing D&D, or hanging out with her partner and their 3 tabby cats.",
+      "Coming soon",
     ],
   }),
-  personSchema.parse({ photo: "kyle-snowden", name: "Kyle Snowden", role: "Regional Assistant Director" }),
-  personSchema.parse({ photo: "lindsey-guarisco", name: "Lindsey Guarisco", role: "Regional Assistant Director" }),
-  personSchema.parse({ photo: "taylor-williams", name: "Taylor Williams", role: "Regional Assistant Director" }),
+  personSchema.parse({
+    photo: "lindsey-guarisco",
+    name: "Lindsey Guarisco",
+    role: "Accounts Director",
+    bio: [
+      "Coming soon",
+    ],
+  }),
+  personSchema.parse({
+    photo: "ellen-parks",
+    name: "Ellen Parks",
+    role: "Regional Assistant Director",
+  }),
+  personSchema.parse({
+    photo: "lindsey-brown",
+    name: "Lindsey Brown",
+    role: "Regional Assistant Director",
+  }),
+  personSchema.parse({
+    photo: "sarah-mcquatters",
+    name: "Sarah McQuatters",
+    role: "Regional Assistant Director + Retail Manager",
+  }),
+  personSchema.parse({
+    photo: "gia-saint-john",
+    name: "Gia Saint John",
+    role: "Marketing Manager",
+  }),
+  personSchema.parse({
+    photo: "patrick-moran",
+    name: "Patrick Moran",
+    role: "Facilities Manager",
+  }),
+  personSchema.parse({
+    photo: "aubrie-harland",
+    name: "Aubrie Harland",
+    role: "Karma Crew Manager",
+  }),
+  personSchema.parse({
+    photo: "audrey-lefler",
+    name: "Audrey Lefler",
+    role: "Karma Crew Manager",
+  }),
 ];
