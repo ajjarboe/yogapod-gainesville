@@ -6,7 +6,7 @@ export const inclusivity = {
   blocks: [
     {
       title: "Inclusivity, unity and safe space commitment",
-      body: "Yoga Pod is a space of safety and acceptance, regardless of sexual orientation, gender, skin color, and/or political orientation. We stand against intolerance of any kind. Our diverse community is committed to provide equal opportunity in all aspects of interaction. We will not tolerate discrimination or harassment, including derogatory comments or conduct of any kind on the basis of age, race, color, national origin, religion, sex, gender identity or expression, sexual orientation, family status, marital status or any other protected status. Our shared intention guides our organization.",
+      body: "yoga pod is a space of safety and acceptance, regardless of sexual orientation, gender, skin color, and/or political orientation. We stand against intolerance of any kind. Our diverse community is committed to provide equal opportunity in all aspects of interaction. We will not tolerate discrimination or harassment, including derogatory comments or conduct of any kind on the basis of age, race, color, national origin, religion, sex, gender identity or expression, sexual orientation, family status, marital status or any other protected status. Our shared intention guides our organization.",
     },
     {
       title: "Hostility, violence, bullying and harassment strictly prohibited",

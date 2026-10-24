@@ -40,7 +40,7 @@ export const pricingGroups: Group[] = [
   },
   {
     id: "membership",
-    title: "Yoga Pod Membership",
+    title: "yoga pod Membership",
     tiers: [
       { key: "monthly8", name: "8 classes a month", term: "per month" },
       { key: "monthlyUnlimited", name: "Unlimited", term: "per month", feature: true },
@@ -52,30 +52,30 @@ export const pricingGroups: Group[] = [
   {
     id: "infinity",
     title: "Infinity Membership",
-    lede: "One membership for both Yoga Pod and APEX. Pick the tier that matches how you train.",
+    lede: "One membership for both yoga pod and APEX. Pick the tier that matches how you train.",
     tiers: [
       {
         key: "infinity8x4",
-        name: "Yoga Pod 8 Class + APEX 4 Class",
+        name: "yoga pod 8 Class + APEX 4 Class",
         term: "per month",
         save: "Save $39/mo",
       },
       {
         key: "infinity8x8",
-        name: "Yoga Pod 8 Class + APEX 8 Class",
+        name: "yoga pod 8 Class + APEX 8 Class",
         term: "per month",
         save: "Save $59/mo",
       },
       {
         key: "infinityUnlimited",
-        name: "Yoga Pod Unlimited + APEX Unlimited",
+        name: "yoga pod Unlimited + APEX Unlimited",
         term: "per month",
         save: "Save $79/mo",
         feature: true,
       },
       {
         key: "infinityAnnual",
-        name: "Yoga Pod Unlimited + APEX Unlimited",
+        name: "yoga pod Unlimited + APEX Unlimited",
         term: "per year",
         save: "Save $629 vs monthly",
       },

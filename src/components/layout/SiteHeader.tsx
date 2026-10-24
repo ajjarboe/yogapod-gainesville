@@ -64,7 +64,7 @@ export function SiteHeader({ path }: { path: string }) {
       <header className="head">
         <div className="shell head-row">
           <a className="head-logo" href="/">
-            <img src="/img/wordmark.png" width={964} height={196} alt="Yoga Pod Gainesville" />
+            <img src="/img/wordmark.png" width={964} height={196} alt="yoga pod Gainesville" />
           </a>
 
           <nav className="head-nav" aria-label="Main">

@@ -2,7 +2,7 @@ import { classStyleSchema } from "@/content/schema";
 
 export const classesIntro = [
   "Our class experience is physically challenging yet accessible, perfect for practitioners of all levels to find a greater state of health, well-being, and connection.",
-  "Yoga Pod is here to help you build your physical skills and challenge you along the way. Our classes are built for all levels, from beginner to advanced, and will guide you to a greater state of health, well-being, and connection. Through our exceptional class offerings you will transform your body, elevate your mind, and open your heart.",
+  "yoga pod is here to help you build your physical skills and challenge you along the way. Our classes are built for all levels, from beginner to advanced, and will guide you to a greater state of health, well-being, and connection. Through our exceptional class offerings you will transform your body, elevate your mind, and open your heart.",
 ];
 
 export const classStyles = [

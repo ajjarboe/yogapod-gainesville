@@ -30,8 +30,8 @@ export function OurClassesPage() {
         <div className="shell-narrow text-center">
           <h2 className="display-md">Not sure where to start?</h2>
           <p className="lede mx-auto mt-5">
-            BASICS and FLOW 1 are the gentlest entry points. Thirty days of unlimited classes gives you
-            room to try all of them.
+            FLOW 1 and HOT are great places for first timers. If you are a seasoned practitioner, jump
+            right into FLOW 2.
           </p>
           <div className="mt-8 flex justify-center">
             <CheckoutLink offering="intro">Try $30 for 30 days</CheckoutLink>

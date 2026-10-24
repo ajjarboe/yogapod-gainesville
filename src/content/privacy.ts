@@ -3,7 +3,7 @@ import { site } from "@/content/site";
 export const privacy = {
   title: "Privacy Policy",
   intro:
-    "We are strongly committed to protecting the privacy of your personal information. The policies below are applicable to the Yoga Pod Gainesville website.",
+    "We are strongly committed to protecting the privacy of your personal information. The policies below are applicable to the yoga pod Gainesville website.",
   sections: [
     {
       title: "1. Purpose",

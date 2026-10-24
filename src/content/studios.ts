@@ -6,9 +6,9 @@ export const studiosIntro =
 export const studios = [
   studioSchema.parse({
     key: "northwest",
-    name: "APEX | Yoga Pod Northwest",
+    name: "APEX | yoga pod Northwest",
     blurb:
-      "At the crossroads of NW 16th Blvd and NW 43rd St, in the Fresh Market shopping center with ample parking. APEX | High Intensity Pilates, Gainesville's premier Xformer/Megaformer studio, is offered at both Yoga Pod Gainesville locations.",
+      "At the crossroads of NW 16th Blvd and NW 43rd St, in the Fresh Market shopping center with ample parking. APEX | High Intensity Pilates, Gainesville's premier Xformer/Megaformer studio, is offered at both yoga pod Gainesville locations.",
     street: "4136 NW 16th Blvd",
     city: "Gainesville, FL 32605",
     phoneDisplay: "352-554-4585",
@@ -25,9 +25,9 @@ export const studios = [
   }),
   studioSchema.parse({
     key: "southwest",
-    name: "Yoga Pod Southwest",
+    name: "yoga pod Southwest",
     blurb:
-      "At the crossroads of SW 34th St and SW Archer Rd, in the University Towne Center with ample parking. APEX | High Intensity Pilates, Gainesville's premier Xformer/Megaformer studio, is offered at both Yoga Pod Gainesville locations.",
+      "At the crossroads of SW 34th St and SW Archer Rd, in the University Towne Center with ample parking. APEX | High Intensity Pilates, Gainesville's premier Xformer/Megaformer studio, is offered at both yoga pod Gainesville locations.",
     street: "3045 SW 34th St Ste 24",
     city: "Gainesville, FL 32608",
     phoneDisplay: "352-792-6373",

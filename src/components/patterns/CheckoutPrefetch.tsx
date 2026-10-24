@@ -65,7 +65,7 @@ function WarmFrame({
   return (
     <iframe
       className={`checkout-warm-frame${active ? " is-active" : ""}`}
-      title="Yoga Pod membership checkout"
+      title="yoga pod membership checkout"
       src={src}
       loading="eager"
       onLoad={() => onLoaded(path)}
@@ -236,7 +236,7 @@ export function CheckoutPrefetch({ children }: { children: ReactNode }) {
         <div className="checkout-warm-bar">
           <div className="checkout-warm-actions">
             <button className="btn btn-ghost" type="button" onClick={closeCheckout}>
-              Back to Yoga Pod
+              Back to yoga pod
             </button>
           </div>
         </div>

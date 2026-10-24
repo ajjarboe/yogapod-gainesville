@@ -31,7 +31,7 @@ export function OurTeamPage() {
             ))}
           </div>
 
-          <h2 className="display-sm mt-14">Director Team</h2>
+          <h2 className="display-sm mt-14">Leadership Team</h2>
           <div className="grid-auto mt-6">
             {directors.map((person) => (
               <PersonCard key={person.name} person={person} />

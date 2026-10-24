@@ -1,5 +1,5 @@
 import { SchedulePage } from "@/pages/SchedulePage";
 
 export function NorthwestSchedulePage() {
-  return <SchedulePage location="northwest" />;
+  return <SchedulePage location="northwest" bothStudios />;
 }
