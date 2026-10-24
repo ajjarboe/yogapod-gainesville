@@ -14,7 +14,7 @@ export const home = {
     items: [
       {
         title: "Every level",
-        body: "HOT, FLOW 1, or FIT are the easiest places to land. All are beginner friendly. Nobody starts at the top.",
+        body: "HOT, FLOW 1, or FIT are the easiest places to land. All are beginner friendly.",
       },
       {
         title: "Built for comfort",
