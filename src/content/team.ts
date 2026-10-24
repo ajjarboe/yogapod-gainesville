@@ -33,7 +33,7 @@ export const ownership = [
     ],
     classes: [
       "**Sweat, Heat, & Beatz**: Mondays 5:45pm (SW)",
-      "**FLOW 2**: Saturdays 10am (NW)",
+      "**FLOW 2**: Wednesdays 7pm (NW), Saturdays 10am (NW)",
     ],
   }),
   personSchema.parse({
