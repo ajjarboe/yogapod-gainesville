@@ -11,18 +11,13 @@ export function Disclose({
   summary: string;
   meta?: string[];
   paragraphs: string[];
-  /** Optional bullets after the paragraphs, e.g. a teacher's classes. */
+  /** Optional bullets shown first, above the paragraphs, e.g. a teacher's classes. */
   list?: { title: string; items: string[] };
 }) {
   return (
     <details className="disclose">
       <summary>{summary}</summary>
       <div className="disclose-body">
-        {paragraphs.map((text) => (
-          <p key={text}>
-            <RichText text={text} />
-          </p>
-        ))}
         {list?.items.length ? (
           <div className="prose">
             <p>
@@ -37,6 +32,11 @@ export function Disclose({
             </ul>
           </div>
         ) : null}
+        {paragraphs.map((text) => (
+          <p key={text}>
+            <RichText text={text} />
+          </p>
+        ))}
         {meta?.length ? (
           <div className="meta-row">
             {meta.map((item) => (
