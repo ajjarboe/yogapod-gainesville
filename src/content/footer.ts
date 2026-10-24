@@ -39,6 +39,13 @@ export const footer = {
         { href: "/membership-change/", label: "Account Management" },
       ],
     },
+    {
+      heading: "Learn about our sister brands",
+      links: [
+        { href: "https://apexgainesville.com/", label: "APEX" },
+        { href: "https://ritualgainesville.com/", label: "RITUAL" },
+      ],
+    },
   ],
   legal: [{ href: "/privacy-policy/", label: "Privacy Policy" }],
 };
