@@ -26,7 +26,7 @@ export const firstClass = {
       question: "How do I book?",
       answer: [
         "Book on the schedule page for [Northwest](/northwest-schedule/) or [Southwest](/southwest-schedule/), or use the RAD App.",
-        'Choose "$30 for 30 Days" for no strings attached, 30 consecutive days of Yoga Pod classes at both studio locations. If you have not already stored your billing information, you will be prompted to do so.',
+        'Choose "$30 for 30 Days" for no strings attached, 30 consecutive days of yoga pod classes at both studio locations. If you have not already stored your billing information, you will be prompted to do so.',
       ],
     }),
     faqItemSchema.parse({

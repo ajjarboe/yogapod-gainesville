@@ -25,43 +25,43 @@ export const pages = {
     path: "/our-team/",
     title: "Our Team | yoga pod Gainesville",
     description:
-      "Locally owned and operated. Meet the owners and directors behind APEX | Yoga Pod — every one of them started here as a student first.",
+      "Locally owned and operated. Meet the owners and directors behind APEX | yoga pod — every one of them started here as a student first.",
   }),
   culture: pageMetaSchema.parse({
     path: "/culture/",
     title: "Our Culture | yoga pod Gainesville",
     description:
-      "Breathe first. Cultivate discipline. Create community. Honor nature. Do the right thing. The mission, values and principles behind Yoga Pod Gainesville.",
+      "Breathe first. Cultivate discipline. Create community. Honor nature. Do the right thing. The mission, values and principles behind yoga pod Gainesville.",
   }),
   inclusivity: pageMetaSchema.parse({
     path: "/inclusivity/",
     title: "Inclusivity | yoga pod Gainesville",
     description:
-      "Yoga Pod is a space of safety and acceptance. Our commitment to inclusivity, unity and a safe space for every student and every member of staff.",
+      "yoga pod is a space of safety and acceptance. Our commitment to inclusivity, unity and a safe space for every student and every member of staff.",
   }),
   yourFirstClass: pageMetaSchema.parse({
     path: "/your-first-class/",
     title: "Your First Class | yoga pod Gainesville",
     description:
-      "New to Yoga Pod? Start with $30 for 30 days unlimited. What to bring, what to expect, and everything to know before you walk in.",
+      "New to yoga pod? Start with $30 for 30 days unlimited. What to bring, what to expect, and everything to know before you walk in.",
   }),
   pricing: pageMetaSchema.parse({
     path: "/pricing/",
     title: "Pricing & Memberships | yoga pod Gainesville",
     description:
-      "Intro offers, monthly and annual memberships, class packs, and Infinity memberships covering both Yoga Pod and APEX.",
+      "Intro offers, monthly and annual memberships, class packs, and Infinity memberships covering both yoga pod and APEX.",
   }),
   northwestSchedule: pageMetaSchema.parse({
     path: "/northwest-schedule/",
     title: "Northwest Schedule | yoga pod Gainesville",
     description:
-      "Book a class at Yoga Pod Northwest, 4136 NW 16th Blvd. Over 200 classes each week across yoga, HIIT and Pilates.",
+      "Book a class at yoga pod Northwest, 4136 NW 16th Blvd. Over 200 classes each week across yoga, HIIT and Pilates.",
   }),
   southwestSchedule: pageMetaSchema.parse({
     path: "/southwest-schedule/",
     title: "Southwest Schedule | yoga pod Gainesville",
     description:
-      "Book a class at Yoga Pod Southwest, 3045 SW 34th St. Over 200 classes each week across yoga, HIIT and Pilates.",
+      "Book a class at yoga pod Southwest, 3045 SW 34th St. Over 200 classes each week across yoga, HIIT and Pilates.",
   }),
   events: pageMetaSchema.parse({
     path: "/events/",
@@ -96,35 +96,35 @@ export const pages = {
   privacyPolicy: pageMetaSchema.parse({
     path: "/privacy-policy/",
     title: "Privacy Policy | yoga pod Gainesville",
-    description: "How Yoga Pod Gainesville collects, uses and protects your personal information.",
+    description: "How yoga pod Gainesville collects, uses and protects your personal information.",
   }),
   membershipChange: pageMetaSchema.parse({
     path: "/membership-change/",
     title: "Account Management | yoga pod Gainesville",
     description:
-      "Upgrade, change, freeze or cancel your Yoga Pod membership. Every request is answered by a member of our team within 4 business days.",
+      "Upgrade, change, freeze or cancel your yoga pod membership. Every request is answered by a member of our team within 4 business days.",
   }),
   cancel: pageMetaSchema.parse({
     path: "/cancel/",
     title: "Cancel My Membership | yoga pod Gainesville",
     description:
-      "Request to cancel your Yoga Pod Gainesville membership. Memberships require 30 days notice.",
+      "Request to cancel your yoga pod Gainesville membership. Memberships require 30 days notice.",
   }),
   freeze: pageMetaSchema.parse({
     path: "/freeze/",
     title: "Freeze My Membership | yoga pod Gainesville",
     description:
-      "Pause your Yoga Pod Gainesville membership while you are away and keep your rate when you return.",
+      "Pause your yoga pod Gainesville membership while you are away and keep your rate when you return.",
   }),
   upgrade: pageMetaSchema.parse({
     path: "/upgrade/",
     title: "Upgrade My Membership | yoga pod Gainesville",
-    description: "Move up to Unlimited, Annual or Infinity at Yoga Pod Gainesville.",
+    description: "Move up to Unlimited, Annual or Infinity at yoga pod Gainesville.",
   }),
   downgrade: pageMetaSchema.parse({
     path: "/downgrade/",
     title: "Change My Membership | yoga pod Gainesville",
-    description: "Step down to a Yoga Pod Gainesville membership that fits your week.",
+    description: "Step down to a yoga pod Gainesville membership that fits your week.",
   }),
   membershipThanks: pageMetaSchema.parse({
     path: "/membership-change/thanks/",
@@ -134,7 +134,7 @@ export const pages = {
   help: pageMetaSchema.parse({
     path: "/help/",
     title: "Account Help | yoga pod Gainesville",
-    description: "Need help, have a question, or have feedback for Yoga Pod Gainesville? Send us a note.",
+    description: "Need help, have a question, or have feedback for yoga pod Gainesville? Send us a note.",
   }),
   helpThanks: pageMetaSchema.parse({
     path: "/help/thanks/",

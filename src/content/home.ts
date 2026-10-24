@@ -6,7 +6,7 @@ export const home = {
     secondary: { href: "/your-first-class/", label: "Your first class" },
     video: "/video/hero.mp4",
     photo: "/img/hero",
-    photoAlt: "Students on their mats in the Yoga Pod Northwest studio",
+    photoAlt: "Students on their mats in the yoga pod Northwest studio",
   },
   pillars: {
     eyebrow: "Breath. Strength. Sweat.",
@@ -51,7 +51,7 @@ export const home = {
     },
     {
       quote:
-        "Love the environment. Everyone at Yoga Pod is extremely friendly and there is no problem finding an instructor who will fit your style. There are plenty of classes to choose from and you'll want to try them all.",
+        "Love the environment. Everyone at yoga pod is extremely friendly and there is no problem finding an instructor who will fit your style. There are plenty of classes to choose from and you'll want to try them all.",
       name: "Parker P.",
     },
     {

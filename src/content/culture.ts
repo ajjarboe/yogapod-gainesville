@@ -1,6 +1,6 @@
 export const culture = {
   intro: [
-    "At Yoga Pod, we commit to breathe first and act second. We cultivate discipline through the rigor, heat, and focus of our practice. Through infectious, positive attitude and culture, we create community and build an impactful tribe. We strive to live in harmony with nature, and our open, compassionate hearts guide us to do the right thing.",
+    "At yoga pod, we commit to breathe first and act second. We cultivate discipline through the rigor, heat, and focus of our practice. Through infectious, positive attitude and culture, we create community and build an impactful tribe. We strive to live in harmony with nature, and our open, compassionate hearts guide us to do the right thing.",
     "Our shared intention is our guiding beacon. We invite you to come as you are, and leave feeling refreshed and inspired.",
   ],
   valuesTitle: "Our Values",
@@ -20,11 +20,11 @@ export const culture = {
     },
     {
       title: "Diversity, Equity & Inclusion",
-      body: "At Yoga Pod, we break the box that society puts us in. We believe that Yoga is for everyone and anyone. You do not have to look or feel a certain way to practice with us. In that, we are committed to diversity and inclusion to expand the variety of students who walk through our doors. We are redefining the status quo surrounding Yoga by fostering an open space that aligns with our core values. This mission wholeheartedly begins with educating ourselves, and holding space for those underrepresented or unseen, as we sweat, breathe, and grow together.",
+      body: "At yoga pod, we break the box that society puts us in. We believe that Yoga is for everyone and anyone. You do not have to look or feel a certain way to practice with us. In that, we are committed to diversity and inclusion to expand the variety of students who walk through our doors. We are redefining the status quo surrounding Yoga by fostering an open space that aligns with our core values. This mission wholeheartedly begins with educating ourselves, and holding space for those underrepresented or unseen, as we sweat, breathe, and grow together.",
     },
     {
       title: "Locally Owned + Operated",
-      body: "Yoga Pod is a locally owned and operated business, where owners Alex & Rachel Jarboe and Dan Carbonell redefine fitness and help students forge a sustainable, intentional practice through breath, strength, and sweat. Our practice informs our purpose in business. We can't wait to welcome you to your first experience.",
+      body: "yoga pod is a locally owned and operated business, where owners Alex & Rachel Jarboe and Dan Carbonell redefine fitness and help students forge a sustainable, intentional practice through breath, strength, and sweat. Our practice informs our purpose in business. We can't wait to welcome you to your first experience.",
     },
   ],
   principlesIntro:
@@ -44,11 +44,11 @@ export const culture = {
     },
     {
       title: "Cultural Responsibility",
-      body: "We value strength in our culture and seek to create that anywhere we go. As a representative of the community, it is important to always uplift those around you and follow the Yoga Pod intention. We take it upon ourselves to lead the charge in mindful communication, listening, and non-violent conflict resolution.",
+      body: "We value strength in our culture and seek to create that anywhere we go. As a representative of the community, it is important to always uplift those around you and follow the yoga pod intention. We take it upon ourselves to lead the charge in mindful communication, listening, and non-violent conflict resolution.",
     },
     {
       title: "Radical Inclusion",
-      body: "Anyone may be a part of Yoga Pod. We welcome and respect the stranger. No prerequisites exist for participation in our community.",
+      body: "Anyone may be a part of yoga pod. We welcome and respect the stranger. No prerequisites exist for participation in our community.",
     },
     {
       title: "Gifting",

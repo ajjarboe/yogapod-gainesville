@@ -212,7 +212,7 @@ export const downgradeForm = membershipFormSchema.parse({
       type: "radio",
       required: true,
       options: [
-        { label: "Yoga Pod Monthly Unlimited", value: "Yoga Pod Monthly Unlimited" },
+        { label: "yoga pod Monthly Unlimited", value: "yoga pod Monthly Unlimited" },
         { label: "8 classes a month", value: "8 classes a month" },
         { label: "Not sure — help me pick", value: "Undecided" },
       ],

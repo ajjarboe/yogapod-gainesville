@@ -43,22 +43,22 @@ export const offerings = {
   infinity8x4: offeringSchema.parse({
     id: "PgvcyH0YglXcyAF9fp3P",
     price: 229,
-    label: "Monthly Infinity — Yoga Pod 8 Class + APEX 4 Class",
+    label: "Monthly Infinity — yoga pod 8 Class + APEX 4 Class",
   }),
   infinity8x8: offeringSchema.parse({
     id: "rBFLfmOmjsiWHUZ2P9MI",
     price: 259,
-    label: "Monthly Infinity — Yoga Pod 8 Class + APEX 8 Class",
+    label: "Monthly Infinity — yoga pod 8 Class + APEX 8 Class",
   }),
   infinityUnlimited: offeringSchema.parse({
     id: "vNC7l8uPbTXTUt8kT0zY",
     price: 319,
-    label: "Monthly Infinity — Yoga Pod Unlimited + APEX Unlimited",
+    label: "Monthly Infinity — yoga pod Unlimited + APEX Unlimited",
   }),
   infinityAnnual: offeringSchema.parse({
     id: "xstmrMzhuTwLRyNIDF1t",
     price: 3199,
-    label: "Annual Infinity — Yoga Pod Unlimited + APEX Unlimited",
+    label: "Annual Infinity — yoga pod Unlimited + APEX Unlimited",
   }),
 } as const;
 
