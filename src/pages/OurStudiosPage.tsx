@@ -34,7 +34,7 @@ export function OurStudiosPage() {
               </p>
 
               <p className="mt-4">
-                <a className="text-brand underline" href={`tel:${studio.phoneRaw}`}>
+                <a className="text-brand-text underline" href={`tel:${studio.phoneRaw}`}>
                   Call or text {studio.phoneDisplay}
                 </a>
               </p>

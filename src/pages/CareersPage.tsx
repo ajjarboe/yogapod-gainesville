@@ -33,7 +33,7 @@ export function CareersPage() {
                 rel="noopener"
               >
                 <h3 className="display-sm">{application.label}</h3>
-                <p className="mt-3 text-brand">Open the application →</p>
+                <p className="mt-3 text-brand-text">Open the application →</p>
               </a>
             ))}
           </div>

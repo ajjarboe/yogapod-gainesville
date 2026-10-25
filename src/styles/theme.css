@@ -2,6 +2,8 @@
 @import "tw-animate-css";
 @import "./palette.css";
 
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 /* ------------------------------------------------------------------
    0. Fonts — self-hosted. Oswald for display, Nunito Sans for body.
    ------------------------------------------------------------------ */
@@ -60,18 +62,22 @@
 
   --pod-text: var(--pod-ink);
   --pod-text-soft: color-mix(in srgb, var(--pod-ink) 72%, var(--pod-bone));
-  --pod-text-muted: color-mix(in srgb, var(--pod-ink) 52%, var(--pod-bone));
+  --pod-text-muted: color-mix(in srgb, var(--pod-ink) 65%, var(--pod-bone));
   --pod-on-dark: var(--pod-bone);
   --pod-on-dark-soft: color-mix(in srgb, var(--pod-bone) 72%, var(--pod-ink));
+  --pod-on-dark-muted: color-mix(in srgb, var(--pod-bone) 58%, var(--pod-ink));
 
   --pod-rule: color-mix(in srgb, var(--pod-ink) 12%, transparent);
-  --pod-rule-strong: color-mix(in srgb, var(--pod-ink) 22%, transparent);
+  --pod-rule-strong: color-mix(in srgb, var(--pod-ink) 48%, transparent);
   --pod-rule-dark: color-mix(in srgb, var(--pod-bone) 16%, transparent);
 
   --pod-action: var(--pod-blue);
   --pod-action-deep: var(--pod-blue-deep);
   --pod-action-soft: color-mix(in srgb, var(--pod-blue) 14%, transparent);
   --pod-action-tint: color-mix(in srgb, var(--pod-blue) 8%, var(--pod-white));
+  --pod-action-text: color-mix(in srgb, var(--pod-blue) 30%, var(--pod-blue-deep));
+  --pod-action-on-dark: var(--pod-blue-light);
+  --pod-action-hover: var(--pod-action-deep);
   --pod-on-action: var(--pod-white);
 
   --pod-sand-soft: color-mix(in srgb, var(--pod-sand) 45%, var(--pod-bone));
@@ -80,6 +86,35 @@
 
   --pod-shadow: 0 14px 40px color-mix(in srgb, var(--pod-ink) 12%, transparent);
   --pod-shadow-lift: 0 22px 60px color-mix(in srgb, var(--pod-ink) 18%, transparent);
+}
+
+/* Dark mode. The inline script in vite.config.ts sets data-theme before paint
+   from the visitor's saved choice, else their system setting.
+   Buttons and brand fills stay yoga pod blue; blue text lifts to pod-blue-light to stay readable. */
+html[data-theme="dark"] {
+  --pod-paper: var(--pod-night);
+  --pod-paper-warm: var(--pod-coal);
+  --pod-paper-warm-2: var(--pod-graphite);
+  --pod-paper-dark: var(--pod-black);
+  --pod-paper-dark-2: color-mix(in srgb, var(--pod-coal) 88%, var(--pod-blue-deep));
+
+  --pod-text: var(--pod-bone);
+  --pod-text-soft: color-mix(in srgb, var(--pod-bone) 78%, var(--pod-night));
+  --pod-text-muted: color-mix(in srgb, var(--pod-bone) 58%, var(--pod-night));
+
+  --pod-rule: color-mix(in srgb, var(--pod-bone) 12%, transparent);
+  --pod-rule-strong: color-mix(in srgb, var(--pod-bone) 42%, transparent);
+
+  --pod-action-deep: var(--pod-blue-light);
+  --pod-action-soft: color-mix(in srgb, var(--pod-blue) 24%, transparent);
+  --pod-action-tint: color-mix(in srgb, var(--pod-blue) 18%, var(--pod-night));
+  --pod-action-text: var(--pod-action-on-dark);
+  --pod-action-hover: color-mix(in srgb, var(--pod-blue) 82%, var(--pod-black));
+
+  --pod-sand-soft: color-mix(in srgb, var(--pod-sand) 30%, var(--pod-coal));
+
+  --pod-shadow: 0 14px 40px color-mix(in srgb, var(--pod-black) 55%, transparent);
+  --pod-shadow-lift: 0 22px 60px color-mix(in srgb, var(--pod-black) 70%, transparent);
 }
 
 /* ------------------------------------------------------------------
@@ -97,6 +132,7 @@
   --muted: var(--pod-text-muted);
   --on-dark: var(--pod-on-dark);
   --on-dark-soft: var(--pod-on-dark-soft);
+  --on-dark-muted: var(--pod-on-dark-muted);
 
   --border: var(--pod-rule);
   --border-strong: var(--pod-rule-strong);
@@ -106,6 +142,9 @@
   --brand-deep: var(--pod-action-deep);
   --brand-soft: var(--pod-action-soft);
   --brand-tint: var(--pod-action-tint);
+  --brand-text: var(--pod-action-text);
+  --brand-on-dark: var(--pod-action-on-dark);
+  --brand-hover: var(--pod-action-hover);
   --on-brand: var(--pod-on-action);
 
   --sand: var(--pod-sand);
@@ -146,6 +185,7 @@
   --color-muted: var(--muted);
   --color-on-dark: var(--on-dark);
   --color-on-dark-soft: var(--on-dark-soft);
+  --color-on-dark-muted: var(--on-dark-muted);
 
   --color-border: var(--border);
   --color-border-strong: var(--border-strong);
@@ -155,6 +195,8 @@
   --color-brand-deep: var(--brand-deep);
   --color-brand-soft: var(--brand-soft);
   --color-brand-tint: var(--brand-tint);
+  --color-brand-text: var(--brand-text);
+  --color-brand-on-dark: var(--brand-on-dark);
   --color-on-brand: var(--on-brand);
 
   --color-sand: var(--sand);
@@ -193,6 +235,11 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    color-scheme: light;
+  }
+
+  html[data-theme="dark"] {
+    color-scheme: dark;
   }
 
   body {
@@ -333,7 +380,7 @@
   font-size: 0.8125rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 .band-dark .eyebrow,
 .hero .eyebrow {
@@ -379,8 +426,8 @@
   border: 2px solid var(--brand);
 }
 .btn-primary:hover {
-  background: var(--brand-deep);
-  border-color: var(--brand-deep);
+  background: var(--brand-hover);
+  border-color: var(--brand-hover);
 }
 .btn-ghost {
   background: transparent;
@@ -389,7 +436,7 @@
 }
 .btn-ghost:hover {
   border-color: var(--brand);
-  color: var(--brand);
+  color: var(--brand-text);
 }
 .band-dark .btn-ghost,
 .band-brand .btn-ghost,
@@ -436,6 +483,46 @@
   height: 1.85rem;
   width: auto;
 }
+.head-logo .logo-on-dark,
+[data-theme="dark"] .head-logo .logo-on-light {
+  display: none;
+}
+[data-theme="dark"] .head-logo .logo-on-dark {
+  display: block;
+}
+.head-tools {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Light / dark switch. Both icons render; the current mode picks one so it never flickers. */
+.mode-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border-strong);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--foreground-soft);
+  cursor: pointer;
+  transition:
+    color 0.16s ease,
+    border-color 0.16s ease;
+}
+.mode-toggle:hover {
+  color: var(--brand-text);
+  border-color: var(--brand);
+}
+.mode-toggle .mode-sun,
+[data-theme="dark"] .mode-toggle .mode-moon {
+  display: none;
+}
+[data-theme="dark"] .mode-toggle .mode-sun {
+  display: block;
+}
 .head-nav {
   display: none;
   align-items: center;
@@ -463,7 +550,7 @@
 }
 .nav-link:hover,
 .nav-link[data-active="true"] {
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 /* Nav dropdown */
@@ -543,7 +630,7 @@
   font-size: 0.75rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 .drawer-group a {
   padding-left: 0.75rem;
@@ -599,7 +686,7 @@
   color: var(--on-dark);
 }
 .rbanner-line strong {
-  color: var(--brand);
+  color: var(--brand-on-dark);
   font-weight: 600;
   letter-spacing: 0.04em;
 }
@@ -615,7 +702,7 @@
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-on-dark);
   background: transparent;
   border: 2px solid var(--brand);
   padding: 0.45em 15px;
@@ -817,7 +904,7 @@ video.hero-media {
   font-size: 1.5rem;
   font-weight: 500;
   line-height: 1;
-  color: var(--brand);
+  color: var(--brand-text);
   transition: transform 0.2s ease;
 }
 .disclose[open] summary::after {
@@ -908,7 +995,7 @@ video.hero-media {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 .price-note {
   font-size: 0.875rem;
@@ -948,7 +1035,7 @@ video.hero-media {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 /* Team */
@@ -969,7 +1056,7 @@ video.hero-media {
   font-size: 0.75rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--brand);
+  color: var(--brand-text);
 }
 
 /* Prose — policy pages */
@@ -992,7 +1079,7 @@ video.hero-media {
   margin-top: 0.75rem;
 }
 .prose a:not(.btn) {
-  color: var(--brand);
+  color: var(--brand-text);
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -1014,7 +1101,7 @@ video.hero-media {
   color: var(--on-dark-soft);
 }
 .foot a:hover {
-  color: var(--brand);
+  color: var(--brand-on-dark);
 }
 .foot-grid {
   display: grid;
@@ -1037,7 +1124,7 @@ video.hero-media {
   padding-top: 1.75rem;
   border-top: 1px solid var(--border-dark);
   font-size: 0.8125rem;
-  color: var(--muted);
+  color: var(--on-dark-muted);
 }
 
 /* Sticky mobile CTA */

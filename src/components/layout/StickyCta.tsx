@@ -8,8 +8,8 @@ export function StickyCta({ label = "Try $30 for 30 days" }: { label?: string })
   useEffect(() => {
     const trigger = document.querySelector(".hero");
     if (!trigger || !("IntersectionObserver" in window)) {
-      setShow(true);
-      return;
+      const id = requestAnimationFrame(() => setShow(true));
+      return () => cancelAnimationFrame(id);
     }
     const io = new IntersectionObserver(
       (entries) => {
