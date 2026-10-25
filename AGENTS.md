@@ -40,7 +40,7 @@ They are in **Claude**. Always-on and path rules live alongside the code as `AGE
 | “so-and-so left” / “new headshot” | team | `src/content/team.ts` + `public/img/team/` |
 | “change the menu” / “add a page to the nav” | header nav | `src/content/nav.ts` |
 | “new photo for the studio” | media | `public/img/` + the path in `src/content/` |
-| “make it warmer / less blue / bigger type” | theme | `src/styles/palette.css` + `theme.css` |
+| “make it warmer / less blue / bigger type” / “dark mode is too dark” | theme | `src/styles/palette.css` + `theme.css` |
 | “add a page for gift cards” | page | `src/pages/` + shell + entry + `vite.config.ts` + `scripts/prerender.mjs` |
 | “the link from the ad is broken” | short link | `netlify.toml` + `src/content/checkout.ts` |
 | “change the cancel form” / “ask them for their end date” | membership request forms | `src/content/membership-forms.ts`, then `yarn forms` |
@@ -67,7 +67,7 @@ If a request would break one of these, say so in plain words before you change a
 ## How to build (the patterns from this repo)
 
 1. Change **copy** in `src/content/` as data. No JSX, no `className`. Bold with `**like this**`. Italic with `*like this*`. Links with `[label](href)`.
-2. Change **look** in `src/styles/palette.css` (hex only) and `theme.css` (mixes). Components use `bg-brand`, `text-foreground-soft`, or the existing site classes (`.btn-primary`, `.band-warm`, `.card-flat`). Do not invent a color.
+2. Change **look** in `src/styles/palette.css` (hex only) and `theme.css` (mixes). Components use `bg-brand`, `text-foreground-soft`, `text-brand-text`, or the existing site classes (`.btn-primary`, `.band-warm`, `.card-flat`). Do not invent a color. Every color has a light value in `:root` and a dark value in the `html[data-theme="dark"]` block of `theme.css` — change both, then check the page in both modes with the header switch.
 3. Compose **UI** from `src/components/patterns/`. Missing one? Add it there with a “use this when…” comment. Do not restyle a page from scratch.
 4. Big titles use `font-display` (Oswald). Body is `font-body` (Nunito Sans). Both are self-hosted in `public/fonts/` — there is no font CDN and no Typekit account to depend on.
 5. No arbitrary Tailwind (`text-[13px]`, `shadow-[…]`). Add a token in `theme.css` instead. ESLint will stop you.

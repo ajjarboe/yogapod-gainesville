@@ -13,4 +13,4 @@ Put the file in `public/img/` at the widths that already exist for that stem, th
 | Home hero video | `public/video/hero.mp4`, path in `src/content/home.ts` |
 | A studio | `public/img/studio-northwest-` or `studio-southwest-` at 640 and 1100, path in `src/content/studios.ts` |
 | A person | `public/img/team/{name}-400.jpg` and `-800.jpg`, stem in `src/content/team.ts` |
-| Header wordmark | `public/img/wordmark.png` |
+| Header wordmark | `public/img/wordmark.png` (light mode) and `wordmark-light.png` (the same logo with bone lettering, for dark mode) — replace both |
