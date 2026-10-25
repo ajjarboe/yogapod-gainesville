@@ -2,13 +2,23 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
 
 const root = path.dirname(fileURLToPath(import.meta.url));
 
+/** Sets light or dark on <html> before first paint so dark-mode visitors never see a white flash.
+ *  The storage key must match src/lib/color-mode.ts. */
+function colorModeScript(): Plugin {
+  const script = `(function(){try{var t=localStorage.getItem("pod-theme");if(t!=="light"&&t!=="dark")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";document.documentElement.dataset.theme=t}catch(e){}})();`;
+  return {
+    name: "pod-color-mode",
+    transformIndexHtml: () => [{ tag: "script", children: script, injectTo: "head-prepend" }],
+  };
+}
+
 export default defineConfig({
   appType: "mpa",
-  plugins: [react(), tailwindcss()],
+  plugins: [colorModeScript(), react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(root, "./src"),

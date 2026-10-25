@@ -1,8 +1,9 @@
 import { useEffect, useState, type ReactNode } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import { headerCta, nav } from "@/content/nav";
 import { site } from "@/content/site";
 import type { NavGroup, NavLink } from "@/content/schema";
+import { useColorMode } from "@/lib/color-mode";
 
 function isGroup(item: NavGroup | NavLink): item is NavGroup {
   return "links" in item;
@@ -40,6 +41,7 @@ function matches(item: NavGroup | NavLink, path: string) {
 export function SiteHeader({ path }: { path: string }) {
   const [openGroup, setOpenGroup] = useState<string | null>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const { mode, toggle } = useColorMode();
 
   useEffect(() => {
     if (!drawerOpen) return;
@@ -64,7 +66,8 @@ export function SiteHeader({ path }: { path: string }) {
       <header className="head">
         <div className="shell head-row">
           <a className="head-logo" href="/">
-            <img src="/img/wordmark.png" width={964} height={196} alt="yoga pod Gainesville" />
+            <img className="logo-on-light" src="/img/wordmark.png" width={964} height={196} alt="yoga pod Gainesville" />
+            <img className="logo-on-dark" src="/img/wordmark-light.png" width={964} height={196} alt="yoga pod Gainesville" />
           </a>
 
           <nav className="head-nav" aria-label="Main">
@@ -106,16 +109,28 @@ export function SiteHeader({ path }: { path: string }) {
             </a>
           </nav>
 
-          <button
-            type="button"
-            className="burger"
-            aria-expanded={drawerOpen}
-            aria-controls="drawer"
-            aria-label={drawerOpen ? "Close menu" : "Open menu"}
-            onClick={() => setDrawerOpen(!drawerOpen)}
-          >
-            {drawerOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="head-tools">
+            <button
+              type="button"
+              className="mode-toggle"
+              aria-label="Dark mode"
+              aria-pressed={mode === "dark"}
+              onClick={toggle}
+            >
+              <Moon className="mode-moon" size={18} aria-hidden="true" />
+              <Sun className="mode-sun" size={18} aria-hidden="true" />
+            </button>
+            <button
+              type="button"
+              className="burger"
+              aria-expanded={drawerOpen}
+              aria-controls="drawer"
+              aria-label={drawerOpen ? "Close menu" : "Open menu"}
+              onClick={() => setDrawerOpen(!drawerOpen)}
+            >
+              {drawerOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
       </header>
       {drawerOpen ? (

@@ -16,4 +16,10 @@
 
   /* Warm — the studio tan */
   --pod-sand: #cdc0b1;
+
+  /* Dark mode grounds, deepest to most raised. Blues and bone stay the same in both modes. */
+  --pod-black: #070809; /* hero, footer, dark bands */
+  --pod-night: #0e1113; /* page */
+  --pod-coal: #181c1f; /* raised bands */
+  --pod-graphite: #23292d; /* second raised band */
 }
