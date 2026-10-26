@@ -14,10 +14,16 @@ export type HeaderPhoto = {
    * "upper" keeps more of the top of the photo in view (heads, shoulders).
    * "top" pins the very top edge: use this when heads or raised hands sit near the top.
    * "lower" slides the photo up so more of the bottom shows.
+   * "top-right" pins the top edge and, on phones, keeps the right side in view (subject on the right).
    */
-  focus?: "upper" | "top" | "lower";
+  focus?: "upper" | "top" | "lower" | "top-right";
   /** A taller banner, so more of the photo shows on wide screens. */
   tall?: boolean;
+  /**
+   * "Zoom out" on wide screens: show the whole photo on the right, fading into the dark
+   * background behind the title. Use for a photo whose subject is on the right.
+   */
+  fitRight?: boolean;
 };
 
 /**
@@ -50,7 +56,9 @@ export function PageHeader({
           width={photo.width}
           height={photo.height}
           sizes="100vw"
-          className={photo.focus ? `hero-media focus-${photo.focus}` : "hero-media"}
+          className={["hero-media", photo.focus ? `focus-${photo.focus}` : "", photo.fitRight ? "fit-right" : ""]
+            .filter(Boolean)
+            .join(" ")}
           priority
         />
         <div className="page-photo-scrim" />

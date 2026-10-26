@@ -1,46 +1,37 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { BookingFrame } from "@/components/patterns/BookingFrame";
 import { PageHeader } from "@/components/patterns/PageHeader";
+import { headerPhotos } from "@/content/header-photos";
 import { scheduleSrc, type LocationKey } from "@/content/checkout";
 import { pages } from "@/content/pages";
-import { site } from "@/content/site";
 import { studios } from "@/content/studios";
 
 /**
- * Both schedule routes render this. Book Now lands on the Northwest route, so that one
- * shows both studios together (`bothStudios`); the Southwest route shows Southwest only.
+ * Both schedule routes render this, laid out like the APEX schedule page. Book Now lands
+ * on the Northwest route, so that one shows both studios together (`bothStudios`); the
+ * Southwest route shows Southwest only.
  */
 export function SchedulePage({ location, bothStudios = false }: { location: LocationKey; bothStudios?: boolean }) {
   const studio = studios.find((item) => item.key === location);
   if (!studio) throw new Error(`unknown studio: ${location}`);
 
   const meta = location === "northwest" ? pages.northwestSchedule : pages.southwestSchedule;
-  const other = studios.find((item) => item.key !== location);
 
   return (
     <SiteChrome path={meta.path}>
-      <PageHeader
-        eyebrow="Schedule"
-        title={bothStudios ? "Northwest & Southwest Schedules Below" : studio.name}
-        lede="Choose from over 200 classes each week between our two studios."
-      >
-        <a className="btn btn-ghost" href={`tel:${studio.phoneRaw}`}>
-          Call or text {studio.phoneDisplay}
-        </a>
-        {other ? (
-          <a className="btn btn-ghost" href={other.schedulePath}>
-            {other.key === "northwest" ? "Northwest" : "Southwest"} schedule
-          </a>
-        ) : null}
-        <a className="btn btn-ghost" href={site.apex.scheduleHref} target="_blank" rel="noopener">
-          APEX schedule
-        </a>
-      </PageHeader>
+      <PageHeader photo={headerPhotos.schedule} title={bothStudios ? "Book at Northwest & Southwest" : studio.name} />
 
       <section className="band band-tight">
         <div className="shell">
-          <p className="text-right text-sm text-muted">{site.app.androidNote}</p>
-          <div className="mt-6">
+          <h2 className="display-md">Need help?</h2>
+          <div className="mt-5 flex flex-wrap gap-3">
+            {studios.map((item) => (
+              <a key={item.key} className="btn btn-primary" href={`tel:${item.phoneRaw}`}>
+                Call {item.key === "northwest" ? "NW" : "SW"}
+              </a>
+            ))}
+          </div>
+          <div className="mt-8">
             <BookingFrame
               src={bothStudios ? scheduleSrc() : scheduleSrc(location)}
               title={bothStudios ? "yoga pod Northwest and Southwest class schedule" : `${studio.name} class schedule`}
