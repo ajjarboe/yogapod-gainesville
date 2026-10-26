@@ -22,6 +22,24 @@ export const headerPhotos = {
     tall: true,
     fitRight: true,
   },
+  pricing: {
+    src: "/img/pricing-prayer-line",
+    alt: "yoga pod students standing in a line with hands at heart center under purple studio light",
+    widths: [640, 1100, 1400],
+    width: 1400,
+    height: 1400,
+    focus: "upper",
+    tall: true,
+    fitRight: "soft",
+  },
+  ourTeam: {
+    src: "/img/team-dancer",
+    alt: "A yoga pod class balancing in Dancer pose under pink and purple studio light, reflected in the mirror",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
+  },
   yourFirstClass: {
     src: "/img/first-class-warrior",
     alt: "A yoga pod class holding Warrior 2 in pink studio light, reflected in the mirror",
@@ -36,5 +54,13 @@ export const headerPhotos = {
     widths: [640, 1100, 1800],
     width: 1800,
     height: 620,
+  },
+  culture: {
+    src: "/img/culture-fit-weights",
+    alt: "A yoga pod class in a side lunge with light hand weights under pink and purple studio light, reflected in the mirror",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
   },
 } satisfies Record<string, HeaderPhoto>;
