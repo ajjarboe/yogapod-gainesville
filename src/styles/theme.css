@@ -819,7 +819,8 @@ video.hero-media {
   display: flex;
   /* Title sits in the lower-left corner so the top of the photo stays clear. */
   align-items: flex-end;
-  min-height: clamp(18rem, 38vw, 28rem);
+  /* One height for every photo header on APEX and yoga pod (Rae, 26 Oct 2026). */
+  min-height: clamp(22rem, 56vw, 44rem);
   padding-block: 6rem 2rem;
   background: var(--surface-dark);
   color: var(--on-dark);
@@ -847,10 +848,6 @@ video.hero-media {
       var(--pod-photo-scrim) 100%
     );
   }
-}
-.page-photo-tall {
-  /* Taller than APEX's so a full yoga shape shows, not just a face. */
-  min-height: clamp(22rem, 56vw, 44rem);
 }
 .page-photo .focus-upper {
   object-position: 50% 28%;
