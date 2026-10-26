@@ -38,6 +38,22 @@ export const home = {
     lede: "Convenient access to both sides of town, with ample parking at each. APEX | High Intensity Pilates is offered at both locations.",
     cta: { href: "/our-studios/", label: "Visit a studio" },
   },
+  appCard: {
+    title: "Download the RAD App",
+    body: "Book & manage your account for APEX, RITUAL, and yoga pod.",
+    note: "Same email for all brands. Tap “Forgot Password” to reset.",
+  },
+  bookCard: {
+    title: "Book this week",
+    body: "View the schedule for Northwest and Southwest yoga pod. Having difficulty booking a class or using your credits? Call or text us. We're here to help.",
+    scheduleLabel: "View yoga pod Gainesville Schedule",
+    scheduleHref: "/northwest-schedule/",
+    contactLabels: {
+      northwest: { text: "Text Northwest", call: "Call Northwest" },
+      southwest: { text: "Text Southwest", call: "Call Southwest" },
+    },
+  },
+  testimonialsTitle: "What Our Students Say",
   testimonials: [
     {
       quote:

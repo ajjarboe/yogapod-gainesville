@@ -1,8 +1,8 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { Carousel } from "@/components/patterns/Carousel";
 import { CheckoutLink } from "@/components/patterns/CheckoutLink";
 import { JsonLd, gymSchema, websiteSchema } from "@/components/patterns/JsonLd";
 import { VideoBackdrop } from "@/components/patterns/VideoBackdrop";
-import { banner } from "@/content/banner";
 import { home } from "@/content/home";
 import { pages } from "@/content/pages";
 import { site } from "@/content/site";
@@ -73,43 +73,53 @@ export function HomePage() {
 
       <section className="band">
         <div className="shell">
-          <h2 className="display-md">What students say</h2>
-          <div className="grid-auto mt-10">
-            {home.testimonials.map((item) => (
-              <blockquote key={item.name} className="quote">
-                <p>&ldquo;{item.quote}&rdquo;</p>
-                <cite>{item.name}</cite>
-              </blockquote>
-            ))}
+          <div className="outline-frame">
+            <Carousel title={home.testimonialsTitle} label="reviews">
+              {home.testimonials.map((item) => (
+                <blockquote key={item.name} className="quote carousel-card">
+                  <p>&ldquo;{item.quote}&rdquo;</p>
+                  <cite>{item.name}</cite>
+                </blockquote>
+              ))}
+            </Carousel>
           </div>
         </div>
       </section>
 
       <section className="band band-dark">
         <div className="shell grid-2">
-          <div>
-            <p className="eyebrow">Book anywhere</p>
-            <h2 className="display-md mt-3">Download the {site.app.name}</h2>
-            <p className="lede mt-5">{site.app.blurb}</p>
-            <div className="mt-6 flex flex-wrap gap-4">
-              {banner.links.map((link) => (
+          <div className="card-dark flex flex-col justify-between gap-6">
+            <h3 className="display-md">{home.appCard.title}</h3>
+            <p className="lede">{home.appCard.body}</p>
+            <p className="text-on-dark-soft">{home.appCard.note}</p>
+            <div className="flex flex-wrap gap-4">
+              {site.app.links.map((link) => (
                 <a key={link.label} className="btn btn-ghost" href={link.href} target="_blank" rel="noopener">
                   {link.label}
                 </a>
               ))}
             </div>
           </div>
-          <div className="card-dark">
-            <h3 className="display-md">Book this week</h3>
-            <p className="mt-3 text-on-dark-soft">
-              Pick the studio that is closer and see what is on the schedule.
-            </p>
-            <div className="pill-row mt-6">
-              {studios.map((studio) => (
-                <a key={studio.key} className="btn btn-ghost" href={studio.schedulePath}>
-                  {studio.key === "northwest" ? "Northwest" : "Southwest"}
-                </a>
-              ))}
+          <div className="card-dark flex flex-col justify-between gap-6">
+            <h3 className="display-md">{home.bookCard.title}</h3>
+            <p className="text-on-dark-soft">{home.bookCard.body}</p>
+            <div className="flex flex-col gap-3">
+              <a className="btn btn-ghost w-full" href={home.bookCard.scheduleHref}>
+                {home.bookCard.scheduleLabel}
+              </a>
+              {studios.map((studio) => {
+                const labels = home.bookCard.contactLabels[studio.key as keyof typeof home.bookCard.contactLabels];
+                return (
+                  <div key={studio.key} className="btn-pair">
+                    <a className="btn btn-ghost" href={`sms:${studio.phoneRaw}`} aria-label={`${labels.text} ${studio.phoneDisplay}`}>
+                      {labels.text}
+                    </a>
+                    <a className="btn btn-ghost" href={`tel:${studio.phoneRaw}`} aria-label={`${labels.call} ${studio.phoneDisplay}`}>
+                      {labels.call}
+                    </a>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
