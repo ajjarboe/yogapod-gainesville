@@ -1014,6 +1014,27 @@ video.hero-media {
   background: var(--surface);
 }
 
+/* Use this when two short buttons sit side by side as a pair, half width each,
+   lined up under one full-width button (e.g. Text / Call a studio). Stays two-up on phones. */
+.btn-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+.btn-pair .btn {
+  padding: 0.8rem 0.6rem;
+  font-size: 0.8125rem;
+  letter-spacing: 0.06em;
+  text-align: center;
+}
+
+/* Use this to set a section apart from the content above it with a light blue outline. */
+.outline-frame {
+  border: 2px solid var(--pod-blue-light);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.25rem, 3vw, 2rem);
+}
+
 /* Quotes */
 .quote {
   display: flex;
@@ -1036,6 +1057,91 @@ video.hero-media {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--brand-text);
+}
+
+/* Carousel: one horizontal row, paged with arrows, swipe on phones */
+.carousel-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.carousel-nav {
+  display: flex;
+  gap: 0.5rem;
+  flex-shrink: 0;
+}
+.carousel-arrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--foreground);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+}
+.carousel-arrow:hover:not(:disabled) {
+  background: var(--brand);
+  border-color: var(--brand);
+  color: var(--on-brand);
+}
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+.carousel-arrow:focus-visible,
+.carousel-track:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+.carousel-track {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+.carousel-track > * {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+}
+.carousel-card {
+  width: min(85%, 21rem);
+}
+.carousel-flush {
+  gap: 0;
+  border-radius: var(--radius-lg);
+}
+.carousel-photo {
+  display: block;
+  width: 70%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+@media (min-width: 640px) {
+  .carousel-photo {
+    width: 50%;
+  }
+}
+@media (min-width: 900px) {
+  .carousel-photo {
+    width: 25%;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carousel-track {
+    scroll-behavior: auto;
+  }
 }
 
 /* Team */
