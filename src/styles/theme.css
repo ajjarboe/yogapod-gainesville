@@ -849,7 +849,8 @@ video.hero-media {
   }
 }
 .page-photo-tall {
-  min-height: clamp(20rem, 46vw, 36rem);
+  /* Taller than APEX's so a full yoga shape shows, not just a face. */
+  min-height: clamp(22rem, 56vw, 44rem);
 }
 .page-photo .focus-upper {
   object-position: 50% 28%;

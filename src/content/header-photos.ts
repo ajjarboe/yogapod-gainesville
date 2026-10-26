@@ -4,11 +4,11 @@ import type { HeaderPhoto } from "@/components/patterns/PageHeader";
 
 export const headerPhotos = {
   ourClasses: {
-    src: "/img/our-classes-twist",
+    src: "/img/our-classes-twist-full",
     alt: "A student in a seated twist with one hand raised, glancing over her shoulder under blue studio light",
     widths: [640, 1100, 1800],
     width: 1800,
-    height: 1350,
+    height: 1755,
     focus: "top",
     tall: true,
   },
