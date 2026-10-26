@@ -1,25 +1,26 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { PageHeader } from "@/components/patterns/PageHeader";
 import { teacherTraining } from "@/content/education";
+import { headerPhotos } from "@/content/header-photos";
 import { pages } from "@/content/pages";
 
 export function TeacherTrainingPage() {
   return (
     <SiteChrome path={pages.teacherTraining.path}>
-      <PageHeader
-        eyebrow={teacherTraining.hero.eyebrow}
-        title={teacherTraining.hero.title}
-        lede={teacherTraining.hero.lede}
-      >
-        <a
-          className="btn btn-primary"
-          href={teacherTraining.contact.href}
-          target="_blank"
-          rel="noopener"
-        >
-          {teacherTraining.contact.label}
-        </a>
-      </PageHeader>
+      <PageHeader photo={headerPhotos.teacherTraining} title={teacherTraining.hero.title} />
+
+      <section className="band-tight">
+        <div className="shell flex flex-wrap gap-3">
+          <a
+            className="btn btn-primary"
+            href={teacherTraining.contact.href}
+            target="_blank"
+            rel="noopener"
+          >
+            {teacherTraining.contact.label}
+          </a>
+        </div>
+      </section>
 
       <section className="band">
         <div className="shell-narrow prose text-foreground-soft">
