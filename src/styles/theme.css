@@ -871,6 +871,9 @@ video.hero-media {
     object-position: 100% 0%;
     mask-image: linear-gradient(90deg, transparent 0%, var(--surface-dark) 40%);
   }
+  .page-photo .fit-right-soft {
+    mask-image: linear-gradient(90deg, transparent 0%, var(--surface-dark) 15%);
+  }
 }
 .page-photo .focus-lower {
   object-position: 50% 75%;

@@ -22,4 +22,14 @@ export const headerPhotos = {
     tall: true,
     fitRight: true,
   },
+  pricing: {
+    src: "/img/pricing-prayer-line",
+    alt: "yoga pod students standing in a line with hands at heart center under purple studio light",
+    widths: [640, 1100, 1400],
+    width: 1400,
+    height: 1400,
+    focus: "upper",
+    tall: true,
+    fitRight: "soft",
+  },
 } satisfies Record<string, HeaderPhoto>;
