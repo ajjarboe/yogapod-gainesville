@@ -17,7 +17,7 @@ export type HeaderPhoto = {
    * "top-right" pins the top edge and, on phones, keeps the right side in view (subject on the right).
    */
   focus?: "upper" | "top" | "lower" | "top-right";
-  /** A taller banner, so more of the photo shows on wide screens. */
+  /** No longer changes anything: every photo header is now the same (tall) height. Kept so older entries still type-check. */
   tall?: boolean;
   /**
    * "Zoom out" on wide screens: show the whole photo on the right, fading into the dark
