@@ -79,21 +79,19 @@ export const warmupWaves: OfferingKey[][] = [
 export const comboKeys = ["infinity8x4", "infinity8x8", "infinityUnlimited", "infinityAnnual"] as const;
 
 /**
- * Workshops and special events, booked by Arketa's own share link for each event.
- * Copy the event id from Arketa (the end of the event's link) when a new workshop goes up.
+ * Workshops and special events. Each one is sold in Arketa as its own pricing option,
+ * so the button goes to that option's checkout (the id at the end of its checkout link).
  */
-const ARKETA_EVENT_CHECKOUT = "https://app.arketa.co/gnv/checkout/";
-
-export const workshopEventIds = {
-  holidayToolkit: "0CeXABuECjrRXvM8kudQ",
-  yinNidraStaycation: "rHlo8M9XsUogMUSz18NP",
-  slowFlowRestore: "L7JgOdDKdkpRK1BJuDsO",
+export const workshopCheckoutIds = {
+  holidayToolkit: "mGSLQmtT1KQaz8rxONLJ",
+  yinNidraStaycation: "d0xBeQMesfw1x8zU7JdC",
+  slowFlowRestore: "bEimDdgQUmmPYQTUFpCK",
 } as const;
 
-export type WorkshopEventKey = keyof typeof workshopEventIds;
+export type WorkshopEventKey = keyof typeof workshopCheckoutIds;
 
 export function workshopHref(key: WorkshopEventKey) {
-  return `${ARKETA_EVENT_CHECKOUT}${workshopEventIds[key]}`;
+  return `${ARKETA_CHECKOUT}${workshopCheckoutIds[key]}`;
 }
 
 export function checkoutHref(key: OfferingKey) {

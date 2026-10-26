@@ -80,6 +80,10 @@ export const workshops = {
         "One registration covers both days. Limited to 20 spots. All levels welcome.",
       ],
       cta: "Reserve your weekend",
+      secondary: {
+        label: "Member/Staff? Email us for your discounted ticket",
+        href: "mailto:Amanda@radcollective.us?subject=Member%2FStaff%20Staycation%20Sign%20Up",
+      },
     },
     {
       event: "slowFlowRestore",
@@ -102,6 +106,7 @@ export const workshops = {
     price: string;
     body: string[];
     cta: string;
+    secondary?: { label: string; href: string };
   }[],
 };
 

@@ -36,7 +36,7 @@ export function WorkshopsPage() {
                       <RichText text={paragraph} />
                     </p>
                   ))}
-                  <div className="mt-auto pt-6">
+                  <div className="mt-auto flex flex-col items-start gap-3 pt-6">
                     <a
                       className="btn btn-primary"
                       href={workshopHref(workshop.event)}
@@ -45,6 +45,11 @@ export function WorkshopsPage() {
                     >
                       {workshop.cta}
                     </a>
+                    {"secondary" in workshop && workshop.secondary ? (
+                      <a className="btn btn-ghost" href={workshop.secondary.href}>
+                        {workshop.secondary.label}
+                      </a>
+                    ) : null}
                   </div>
                 </article>
               ))}
