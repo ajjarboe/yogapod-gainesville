@@ -48,6 +48,13 @@ export const headerPhotos = {
     height: 1067,
     focus: "upper",
   },
+  ourStudios: {
+    src: "/img/our-studios-storefront-centered",
+    alt: "The APEX | yoga pod storefront at 4136 NW 16th Blvd, with the sign above the studio windows",
+    widths: [640, 1100, 1800],
+    width: 1800,
+    height: 620,
+  },
   culture: {
     src: "/img/culture-fit-weights",
     alt: "A yoga pod class in a side lunge with light hand weights under pink and purple studio light, reflected in the mirror",
