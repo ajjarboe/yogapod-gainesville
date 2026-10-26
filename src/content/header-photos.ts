@@ -48,4 +48,12 @@ export const headerPhotos = {
     height: 1067,
     focus: "upper",
   },
+  culture: {
+    src: "/img/culture-fit-weights",
+    alt: "A yoga pod class in a side lunge with light hand weights under pink and purple studio light, reflected in the mirror",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
+  },
 } satisfies Record<string, HeaderPhoto>;

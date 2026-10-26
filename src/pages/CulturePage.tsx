@@ -1,16 +1,18 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
 import { PageHeader } from "@/components/patterns/PageHeader";
 import { culture } from "@/content/culture";
+import { headerPhotos } from "@/content/header-photos";
 import { pages } from "@/content/pages";
 
 export function CulturePage() {
   return (
     <SiteChrome path={pages.culture.path}>
-      <PageHeader eyebrow="About" title="Our Culture" lede={culture.intro[0]} />
+      <PageHeader photo={headerPhotos.culture} title="Our Culture" />
 
       <section className="band">
         <div className="shell">
-          <h2 className="display-md">{culture.valuesTitle}</h2>
+          <p className="lede">{culture.intro[0]}</p>
+          <h2 className="display-md mt-10">{culture.valuesTitle}</h2>
           <p className="lede mt-5">{culture.intro[1]}</p>
           <div className="meta-row mt-8">
             {culture.values.map((value) => (
