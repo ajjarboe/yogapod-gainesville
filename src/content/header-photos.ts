@@ -30,4 +30,12 @@ export const headerPhotos = {
     height: 1067,
     focus: "upper",
   },
+  workshops: {
+    src: "/img/workshops-warrior3",
+    alt: "A yoga pod class balancing in Warrior 3 with arms reaching forward under pink and purple studio light",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
+  },
 } satisfies Record<string, HeaderPhoto>;
