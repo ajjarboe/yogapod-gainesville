@@ -63,4 +63,13 @@ export const headerPhotos = {
     height: 1067,
     tall: true,
   },
+  teacherTraining: {
+    src: "/img/teacher-training-group",
+    alt: "A smiling group of yoga pod students and teachers together after class under pink studio light",
+    widths: [640, 960],
+    width: 960,
+    height: 562,
+    focus: "upper",
+    tall: true,
+  },
 } satisfies Record<string, HeaderPhoto>;

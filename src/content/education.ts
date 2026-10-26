@@ -1,10 +1,9 @@
 export const teacherTraining = {
   hero: {
-    eyebrow: "Teacher Training",
-    title: "Learn to teach",
-    lede: "We love helping students become teachers. We offer a refreshingly unique twist on the traditional 200-hour training courses as well as FIT, HOT and YIN through our Yoga Alliance program.",
+    title: "Learn to Teach",
   },
   body: [
+    "We love helping students become teachers. We offer a refreshingly unique twist on the traditional 200-hour training courses as well as FIT, HOT and YIN through our Yoga Alliance program.",
     "Our programs help students expand their potential, ignite their hearts, and empower themselves. Trainings focus on a deepened sense of alignment understanding, applied anatomy, history and philosophy, subtle energy of the body, practical teaching skills, and more. Students will walk away with the skills they need to lead safe and powerful yoga and fitness classes.",
     "Our Teacher Training programs are intended for you to learn to teach. Expect a focus on practical application of teaching skills. Our 200-hour Teacher Training program has a heavy focus on FLOW 1 and FLOW 2 class styles — when you graduate, you will have the skills to teach both.",
     "Some of our most beloved teachers entered training thinking that they would never teach, but after immersing in the practice, found confidence and passion in the seat of the teacher. If you are unwilling to teach or try out teaching in our program, Teacher Training will not be the right fit for you. We would love to invite you to our intensive programs geared towards those who would like to deepen their practice instead.",
