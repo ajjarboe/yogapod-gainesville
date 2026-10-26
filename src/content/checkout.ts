@@ -78,6 +78,22 @@ export const warmupWaves: OfferingKey[][] = [
 /** Infinity checkouts take longer to settle, same as RITUAL's combo upgrades. */
 export const comboKeys = ["infinity8x4", "infinity8x8", "infinityUnlimited", "infinityAnnual"] as const;
 
+/**
+ * Workshops and special events. Each one is sold in Arketa as its own pricing option,
+ * so the button goes to that option's checkout (the id at the end of its checkout link).
+ */
+export const workshopCheckoutIds = {
+  holidayToolkit: "mGSLQmtT1KQaz8rxONLJ",
+  yinNidraStaycation: "d0xBeQMesfw1x8zU7JdC",
+  slowFlowRestore: "bEimDdgQUmmPYQTUFpCK",
+} as const;
+
+export type WorkshopEventKey = keyof typeof workshopCheckoutIds;
+
+export function workshopHref(key: WorkshopEventKey) {
+  return `${ARKETA_CHECKOUT}${workshopCheckoutIds[key]}`;
+}
+
 export function checkoutHref(key: OfferingKey) {
   return `${ARKETA_CHECKOUT}${offerings[key].id}`;
 }
