@@ -8,7 +8,6 @@ export const footer = {
         { href: "/our-classes/", label: "Our Classes" },
         { href: "/your-first-class/", label: "Your First Class" },
         { href: "/pricing/", label: "Pricing" },
-        { href: "/events/", label: "Events" },
       ],
     },
     {
