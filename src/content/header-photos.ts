@@ -22,6 +22,16 @@ export const headerPhotos = {
     tall: true,
     fitRight: true,
   },
+  pricing: {
+    src: "/img/pricing-prayer-line",
+    alt: "yoga pod students standing in a line with hands at heart center under purple studio light",
+    widths: [640, 1100, 1400],
+    width: 1400,
+    height: 1400,
+    focus: "upper",
+    tall: true,
+    fitRight: "soft",
+  },
   ourTeam: {
     src: "/img/team-dancer",
     alt: "A yoga pod class balancing in Dancer pose under pink and purple studio light, reflected in the mirror",
