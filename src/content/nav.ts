@@ -6,8 +6,8 @@ export const nav = [
   navGroupSchema.parse({
     label: "Schedule",
     links: [
-      { href: site.apex.scheduleHref, label: "APEX Gainesville" },
       { href: "/northwest-schedule/", label: "yoga pod Gainesville" },
+      { href: site.apex.scheduleHref, label: "APEX Gainesville" },
     ],
   }),
   navGroupSchema.parse({
