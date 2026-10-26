@@ -2,10 +2,9 @@ import { faqItemSchema } from "@/content/schema";
 
 export const firstClass = {
   hero: {
-    eyebrow: "Your First Class",
-    title: "$30 for 30 days unlimited",
-    lede: "Practice for just $1 per day. No contracts. No strings attached. Your 30 consecutive days do not start until your first class.",
-    cta: "Start your 30 days",
+    title: "NEW STUDENT INTRO OFFER",
+    cta: "Try 30 days unlimited for $30",
+    secondary: { href: "/northwest-schedule/", label: "See the schedule" },
   },
   steps: [
     {

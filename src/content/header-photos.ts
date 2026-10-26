@@ -22,4 +22,12 @@ export const headerPhotos = {
     tall: true,
     fitRight: true,
   },
+  yourFirstClass: {
+    src: "/img/first-class-warrior",
+    alt: "A yoga pod class holding Warrior 2 in pink studio light, reflected in the mirror",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    focus: "upper",
+  },
 } satisfies Record<string, HeaderPhoto>;

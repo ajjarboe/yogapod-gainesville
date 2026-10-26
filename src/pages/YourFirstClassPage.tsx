@@ -3,18 +3,22 @@ import { CheckoutLink } from "@/components/patterns/CheckoutLink";
 import { Disclose } from "@/components/patterns/Disclose";
 import { PageHeader } from "@/components/patterns/PageHeader";
 import { firstClass } from "@/content/first-class";
+import { headerPhotos } from "@/content/header-photos";
 import { pages } from "@/content/pages";
 
 export function YourFirstClassPage() {
   return (
     <SiteChrome path={pages.yourFirstClass.path}>
-      <PageHeader
-        eyebrow={firstClass.hero.eyebrow}
-        title={firstClass.hero.title}
-        lede={firstClass.hero.lede}
-      >
-        <CheckoutLink offering="intro">{firstClass.hero.cta}</CheckoutLink>
-      </PageHeader>
+      <PageHeader photo={headerPhotos.yourFirstClass} title={firstClass.hero.title} />
+
+      <section className="band-tight">
+        <div className="shell flex flex-wrap gap-3">
+          <CheckoutLink offering="intro">{firstClass.hero.cta}</CheckoutLink>
+          <a className="btn btn-primary" href={firstClass.hero.secondary.href}>
+            {firstClass.hero.secondary.label}
+          </a>
+        </div>
+      </section>
 
       <section className="band">
         <div className="shell">
