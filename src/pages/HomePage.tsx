@@ -36,38 +36,17 @@ export function HomePage() {
       </section>
 
       <section className="band">
-        <div className="shell">
-          <p className="eyebrow">{home.pillars.eyebrow}</p>
-          <h2 className="display-md mt-3">{home.pillars.title}</h2>
-          <div className="grid-auto mt-10">
-            {home.pillars.items.map((item) => (
-              <div key={item.title} className="card-flat">
-                <h3 className="display-sm">{item.title}</h3>
-                <p className="mt-3 text-foreground-soft">{item.body}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="band band-warm">
         <div className="shell grid-2">
-          <div>
-            <p className="eyebrow">{home.classesTeaser.eyebrow}</p>
-            <h2 className="display-md mt-3">{home.classesTeaser.title}</h2>
-            <p className="lede mt-5">{home.classesTeaser.lede}</p>
-            <a className="btn btn-ghost mt-8" href={home.classesTeaser.cta.href}>
-              {home.classesTeaser.cta.label}
-            </a>
-          </div>
-          <div>
-            <p className="eyebrow">{home.studiosTeaser.eyebrow}</p>
-            <h2 className="display-md mt-3">{home.studiosTeaser.title}</h2>
-            <p className="lede mt-5">{home.studiosTeaser.lede}</p>
-            <a className="btn btn-ghost mt-8" href={home.studiosTeaser.cta.href}>
-              {home.studiosTeaser.cta.label}
-            </a>
-          </div>
+          {[home.classesTeaser, home.studiosTeaser].map((teaser) => (
+            <div key={teaser.eyebrow} className="flex flex-col">
+              <p className="eyebrow">{teaser.eyebrow}</p>
+              <h2 className="display-md mt-3">{teaser.title}</h2>
+              <p className="lede mt-5 mb-8">{teaser.lede}</p>
+              <a className="btn btn-ghost mt-auto self-start" href={teaser.cta.href}>
+                {teaser.cta.label}
+              </a>
+            </div>
+          ))}
         </div>
       </section>
 
