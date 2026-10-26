@@ -2,10 +2,13 @@ import { Disclose } from "@/components/patterns/Disclose";
 import { Photo } from "@/components/patterns/Photo";
 import type { Person } from "@/content/schema";
 
-/** A bio opens only when we have one written. Without it, name and role alone. */
-export function PersonCard({ person }: { person: Person }) {
+/**
+ * A bio opens only when we have one written. Without it, name and role alone.
+ * Use `round` for a round photo with no card box around it (Our Team, like APEX).
+ */
+export function PersonCard({ person, round = false }: { person: Person; round?: boolean }) {
   return (
-    <div className="card-flat">
+    <div className={round ? "person-round" : "card-flat"}>
       {person.photo ? (
         <Photo
           src={`/img/team/${person.photo}`}
@@ -14,7 +17,7 @@ export function PersonCard({ person }: { person: Person }) {
           sizes="(min-width: 900px) 20rem, 90vw"
           width={800}
           height={800}
-          className="media mb-5"
+          className={round ? "media-round mb-5" : "media mb-5"}
         />
       ) : null}
       <p className="person-name">{person.name}</p>

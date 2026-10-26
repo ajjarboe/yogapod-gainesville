@@ -32,6 +32,14 @@ export const headerPhotos = {
     tall: true,
     fitRight: "soft",
   },
+  ourTeam: {
+    src: "/img/team-dancer",
+    alt: "A yoga pod class balancing in Dancer pose under pink and purple studio light, reflected in the mirror",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
+  },
   yourFirstClass: {
     src: "/img/first-class-warrior",
     alt: "A yoga pod class holding Warrior 2 in pink studio light, reflected in the mirror",
