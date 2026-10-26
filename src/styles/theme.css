@@ -83,6 +83,10 @@
   --pod-sand-soft: color-mix(in srgb, var(--pod-sand) 45%, var(--pod-bone));
   --pod-scrim: color-mix(in srgb, var(--pod-ink) 62%, transparent);
   --pod-scrim-strong: color-mix(in srgb, var(--pod-ink) 80%, transparent);
+  /* Lighter shades for photo page headers, so the photo shows (same as APEX). */
+  --pod-photo-scrim: color-mix(in srgb, var(--pod-ink) 35%, transparent);
+  --pod-photo-scrim-strong: color-mix(in srgb, var(--pod-ink) 55%, transparent);
+  --pod-photo-scrim-heavy: color-mix(in srgb, var(--pod-ink) 72%, transparent);
 
   --pod-shadow: 0 14px 40px color-mix(in srgb, var(--pod-ink) 12%, transparent);
   --pod-shadow-lift: 0 22px 60px color-mix(in srgb, var(--pod-ink) 18%, transparent);
@@ -807,6 +811,62 @@ section[id],
 video.hero-media {
   pointer-events: none;
   transform: translateZ(0);
+}
+
+/* Photo page headers (PageHeader with `photo`), same layout as APEX */
+.page-photo {
+  position: relative;
+  display: flex;
+  /* Title sits in the lower-left corner so the top of the photo stays clear. */
+  align-items: flex-end;
+  min-height: clamp(18rem, 38vw, 28rem);
+  padding-block: 6rem 2rem;
+  background: var(--surface-dark);
+  color: var(--on-dark);
+  overflow: hidden;
+}
+.page-photo-scrim {
+  position: absolute;
+  inset: 0;
+  /* Dark only where the words are (bottom, a little more on the left); the top stays bright. */
+  background:
+    linear-gradient(
+      0deg,
+      var(--pod-photo-scrim-heavy) 0%,
+      var(--pod-photo-scrim-strong) 35%,
+      transparent 75%
+    ),
+    linear-gradient(90deg, var(--pod-photo-scrim) 0%, transparent 60%);
+}
+@media (max-width: 640px) {
+  .page-photo-scrim {
+    background: linear-gradient(
+      0deg,
+      var(--pod-photo-scrim-heavy) 0%,
+      var(--pod-photo-scrim-strong) 55%,
+      var(--pod-photo-scrim) 100%
+    );
+  }
+}
+.page-photo-tall {
+  /* Taller than APEX's so a full yoga shape shows, not just a face. */
+  min-height: clamp(22rem, 56vw, 44rem);
+}
+.page-photo .focus-upper {
+  object-position: 50% 28%;
+}
+.page-photo .focus-top {
+  object-position: 50% 0%;
+}
+.page-photo .focus-lower {
+  object-position: 50% 75%;
+}
+.page-photo-inner {
+  position: relative;
+  text-align: left;
+}
+.page-photo h1 {
+  color: var(--on-dark);
 }
 
 /* Cards */

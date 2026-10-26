@@ -2,17 +2,19 @@ import { SiteChrome } from "@/components/layout/SiteChrome";
 import { CheckoutLink } from "@/components/patterns/CheckoutLink";
 import { Disclose } from "@/components/patterns/Disclose";
 import { PageHeader } from "@/components/patterns/PageHeader";
+import { headerPhotos } from "@/content/header-photos";
 import { classesIntro, classStyles } from "@/content/classes";
 import { pages } from "@/content/pages";
 
 export function OurClassesPage() {
   return (
     <SiteChrome path={pages.ourClasses.path}>
-      <PageHeader eyebrow="About" title="Our Classes" lede={classesIntro[0]} />
+      <PageHeader photo={headerPhotos.ourClasses} title="Our Classes" />
 
       <section className="band">
         <div className="shell-narrow">
-          <p className="text-foreground-soft">{classesIntro[1]}</p>
+          <p className="lede">{classesIntro[0]}</p>
+          <p className="mt-5 text-foreground-soft">{classesIntro[1]}</p>
           <div className="mt-10">
             {classStyles.map((style) => (
               <Disclose
