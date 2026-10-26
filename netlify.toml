@@ -43,6 +43,25 @@
   to = "/northwest-schedule/"
   status = 301
 
+# ---------------------------------------------------------------------------
+# Events page hidden for now (Rae, 26 Oct 2026): nothing on it yet. The page
+# still builds; this sends visitors to Workshops instead. To bring Events back,
+# delete these two rules and put "Events" back in nav.ts, footer.ts and
+# public/sitemap.xml.
+# ---------------------------------------------------------------------------
+
+[[redirects]]
+  from = "/events"
+  to = "/workshops/"
+  status = 302
+  force = true
+
+[[redirects]]
+  from = "/events/*"
+  to = "/workshops/"
+  status = 302
+  force = true
+
 [[redirects]]
   from = "/northwest-events"
   to = "/events/"

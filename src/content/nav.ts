@@ -19,7 +19,6 @@ export const nav = [
       { href: "/culture/", label: "Our Culture" },
     ],
   }),
-  navLinkSchema.parse({ href: "/events/", label: "Events" }),
   navLinkSchema.parse({ href: "/your-first-class/", label: "Your First Class" }),
   navLinkSchema.parse({ href: "/pricing/", label: "Pricing" }),
   navGroupSchema.parse({
