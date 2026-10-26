@@ -30,4 +30,11 @@ export const headerPhotos = {
     height: 1067,
     focus: "upper",
   },
+  ourStudios: {
+    src: "/img/our-studios-storefront",
+    alt: "The APEX | yoga pod storefront at 4136 NW 16th Blvd, with the sign above the studio windows",
+    widths: [640, 1100, 1800],
+    width: 1800,
+    height: 631,
+  },
 } satisfies Record<string, HeaderPhoto>;
