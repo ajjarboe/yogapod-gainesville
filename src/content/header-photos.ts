@@ -12,4 +12,14 @@ export const headerPhotos = {
     focus: "top",
     tall: true,
   },
+  schedule: {
+    src: "/img/schedule-prayer",
+    alt: "A smiling yoga pod student with her hands at heart center in glowing pink and purple studio light",
+    widths: [640, 1100, 1800],
+    width: 1800,
+    height: 1200,
+    focus: "top-right",
+    tall: true,
+    fitRight: true,
+  },
 } satisfies Record<string, HeaderPhoto>;
