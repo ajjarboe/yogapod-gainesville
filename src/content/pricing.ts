@@ -26,17 +26,13 @@ export const pricingHeader = {
 export const pricingNote =
   "All purchases are final. No refunds are available for drop-ins, class packs, or memberships.";
 
-const CANCELLATION = "30 days' notice required to cancel monthly and annual memberships.";
-const MINIMUM = "Monthly memberships have a 2-month minimum.";
+const CANCELLATION = "30 days' notice required to cancel monthly memberships.";
 
 export const pricingGroups: Group[] = [
   {
     id: "intro",
     title: "Intro Offer",
     lede: "No contract. 30 days starts on your first class.",
-    note: [
-      "One intro offer per person. If more than one is purchased, our team will reach out to switch it to another package.",
-    ],
     tiers: [
       {
         key: "intro",
@@ -48,8 +44,8 @@ export const pricingGroups: Group[] = [
   },
   {
     id: "membership",
-    title: "yoga pod Memberships",
-    note: [CANCELLATION, MINIMUM],
+    title: "Autopay Memberships",
+    note: [CANCELLATION],
     tiers: [
       { key: "monthly8", name: "8 classes a month", term: "per month" },
       { key: "monthlyUnlimited", name: "Unlimited", term: "per month", feature: true },
@@ -60,8 +56,7 @@ export const pricingGroups: Group[] = [
   {
     id: "infinity",
     title: "Infinity Memberships",
-    lede: "One membership for both yoga pod and APEX.",
-    note: [CANCELLATION, MINIMUM, "Class allotments don't roll over."],
+    note: [CANCELLATION, "Class allotments don't roll over."],
     tiers: [
       {
         key: "infinity8x4",
