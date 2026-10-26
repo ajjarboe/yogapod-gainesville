@@ -63,6 +63,14 @@ export const headerPhotos = {
     height: 1067,
     tall: true,
   },
+  workshops: {
+    src: "/img/workshops-class-front",
+    alt: "A full yoga pod class balancing in Warrior 3, facing the camera, under pink and purple studio light",
+    widths: [640, 1100, 1600],
+    width: 1600,
+    height: 1067,
+    tall: true,
+  },
   teacherTraining: {
     src: "/img/teacher-training-group",
     alt: "A smiling group of yoga pod students and teachers together after class under pink studio light",

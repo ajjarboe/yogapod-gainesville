@@ -1,3 +1,5 @@
+import type { WorkshopEventKey } from "@/content/checkout";
+
 export const teacherTraining = {
   hero: {
     title: "Learn to Teach",
@@ -44,8 +46,67 @@ export const workshops = {
   hero: {
     eyebrow: "Workshops",
     title: "Deepen your practice",
-    lede: "Explore subtleties of your yoga, fitness, meditation and breath work practices with your favorite teachers. Expect intentional curriculum designed to complement your practice.",
+    lede: "Explore the subtleties of your yoga, fitness, meditation and breathwork practices with your favorite teachers. Expect intentional curriculum designed to complement your practice.",
   },
+  upcomingTitle: "Upcoming workshops",
+  empty: "New workshops are on the way. Check back soon, or ask at the front desk.",
+  /** Newest last. Remove a workshop once it has happened. The booking link lives in checkout.ts. */
+  list: [
+    {
+      event: "holidayToolkit",
+      title: "Your Holiday Toolkit: Self Care Before the Season Starts",
+      when: ["Friday, November 20 · 6:30 to 8:30 PM"],
+      teacher: "Kate Keskinen",
+      where: "Northwest studio",
+      price: "$25",
+      body: [
+        "The holidays can bring joy and connection, along with loneliness, overwhelm, sadness or frustration. You already have more tools than you realize to move through it all with presence and care.",
+        "Together we'll build your personal toolkit: movement to energize you when you're sluggish and ground you when you're scattered, breathwork and meditation to calm your nervous system, somatic tools for when you feel activated, and simple ways to come back to your practice when you need it most.",
+        "Bring a journal, a pen, a yoga mat and an open mind. All levels welcome. Come as you are.",
+      ],
+      cta: "Reserve your spot",
+    },
+    {
+      event: "yinNidraStaycation",
+      title: "Yin & Nidra Staycation",
+      when: ["Saturday, December 12 · 1:30 to 5:30 PM", "Sunday, December 13 · 1:30 to 4:30 PM"],
+      teacher: "Daisy Nation",
+      where: "Northwest studio",
+      price: "$425 · Members $350",
+      body: [
+        "A weekend of deep rest to help you slow down, release tension and recharge before the holidays. This season, celebrate yourself by making time and space to nourish you.",
+        "Over two afternoons, settle into long-held yin postures, guided yoga nidra, breath practice and meditation. Includes a copy of *Yin Yoga Exploration: Deepening Our Experience* by Asha Wolf. Bring a journal and pen.",
+        "One registration covers both days. Limited to 20 spots. All levels welcome.",
+      ],
+      cta: "Reserve your weekend",
+      secondary: {
+        label: "Member/Staff? Email us for your discounted ticket",
+        href: "mailto:Amanda@radcollective.us?subject=Member%2FStaff%20Staycation%20Sign%20Up",
+      },
+    },
+    {
+      event: "slowFlowRestore",
+      title: "Slow Flow + Restore",
+      when: ["Sunday, December 20 · 6:30 to 7:45 PM"],
+      teacher: "Kate Keskinen",
+      where: "Northwest studio",
+      price: "$20",
+      body: [
+        "Cacao, meditation and breathwork. Ease into the season with a slow, supported flow, then settle into deep restoration with ceremonial cacao, guided meditation and breathwork.",
+      ],
+      cta: "Reserve your spot",
+    },
+  ] satisfies {
+    event: WorkshopEventKey;
+    title: string;
+    when: string[];
+    teacher: string;
+    where: string;
+    price: string;
+    body: string[];
+    cta: string;
+    secondary?: { label: string; href: string };
+  }[],
 };
 
 export const events = {
