@@ -31,8 +31,8 @@ export const headerPhotos = {
     focus: "upper",
   },
   workshops: {
-    src: "/img/workshops-warrior3",
-    alt: "A yoga pod class balancing in Warrior 3 with arms reaching forward under pink and purple studio light",
+    src: "/img/workshops-class-front",
+    alt: "A full yoga pod class balancing in Warrior 3, facing the camera, under pink and purple studio light",
     widths: [640, 1100, 1600],
     width: 1600,
     height: 1067,
