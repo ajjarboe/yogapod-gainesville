@@ -8,35 +8,17 @@ export const home = {
     photo: "/img/hero",
     photoAlt: "Students on their mats in the yoga pod Northwest studio",
   },
-  pillars: {
-    eyebrow: "Breath. Strength. Sweat.",
-    title: "A practice that meets you where you are",
-    items: [
-      {
-        title: "Every level",
-        body: "HOT, FLOW 1, or FIT are the easiest places to land. All are beginner friendly.",
-      },
-      {
-        title: "Built for comfort",
-        body: "Medical-grade air filtration, antimicrobial cushioned flooring, top-of-the-line props, and spa-like locker rooms with showers.",
-      },
-      {
-        title: "One community",
-        body: "Locally owned and operated. Every leader on our team started here as a student first.",
-      },
-    ],
-  },
   classesTeaser: {
     eyebrow: "Our Classes",
-    title: "Twelve ways to move",
-    lede: "From a 20-minute sound bath to a 105° HOT room, the schedule is built so you can find the practice that fits the day you are having.",
-    cta: { href: "/our-classes/", label: "See all class styles" },
+    title: "Breath. Strength. Sweat.",
+    lede: "Our class experience is perfect for practitioners of all levels to find a greater state of health, well-being, and connection.",
+    cta: { href: "/our-classes/", label: "Check Out Classes" },
   },
   studiosTeaser: {
     eyebrow: "Our Studios",
     title: "Northwest and Southwest",
-    lede: "Convenient access to both sides of town, with ample parking at each. APEX | High Intensity Pilates is offered at both locations.",
-    cta: { href: "/our-studios/", label: "Visit a studio" },
+    lede: "Two convenient locations in town with spa-like locker rooms, retail boutiques, and ample parking. Northwest has 2 yoga rooms. Southwest has 1.",
+    cta: { href: "/our-studios/", label: "Check Out Locations" },
   },
   appCard: {
     title: "Download the RAD App",
@@ -78,7 +60,7 @@ export const home = {
   ],
   closing: {
     title: "Your first 30 days are $1 a day",
-    lede: "No contracts. No strings attached. Your 30 consecutive days do not start until your first class.",
-    cta: "Start with $30 for 30 days",
+    lede: "No strings attached. Your 30 consecutive days do not start until your first class.",
+    cta: "Elevate your yoga journey today",
   },
 };
