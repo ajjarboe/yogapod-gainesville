@@ -15,9 +15,6 @@ export const story = {
   ],
 };
 
-export const teamIntro =
-  "We have an incredible, robust team of passionate leaders that have found their way to yoga pod first as students and grew into leadership roles. Explore our team below and get to know them a little better, and best, go take their class.";
-
 export const ownership = [
   personSchema.parse({
     photo: "alex-jarboe-2026",
@@ -31,10 +28,6 @@ export const ownership = [
       "Alex teaches FLOW and HOT classes, with a special love for FLOW 2. His classes emphasize intelligent sequencing, breath-to-movement, moments of stillness, and thoughtfully curated music — challenging yet accessible, and designed to build both strength and awareness. Leading the yoga pod 200-Hour Teacher Training is one of his greatest passions, and he finds deep fulfillment in supporting students as they step confidently into their voice and leadership as teachers.",
       "At his core, Alex believes yoga is a practice of relationship—between mind, body, breath, and spirit—and that when practiced with intention, its impact ripples far beyond the mat.",
     ],
-    classes: [
-      "**Sweat, Heat, & Beatz**: Mondays 5:45pm (SW)",
-      "**FLOW 2**: Wednesdays 7pm (NW), Saturdays 10am (NW)",
-    ],
   }),
   personSchema.parse({
     photo: "rae-jarboe",
@@ -45,10 +38,6 @@ export const ownership = [
       "**Which yoga pod class do you enjoy most and why?** I love all of our class styles and teach each one. It's so hard to choose when they all have such a perfect balance to one another. I choose them all!",
       "**What type of music do you play in your classes?** Each class will vary, but I am always focused on bringing new, creative music each and every class.",
       "**When you're not practicing yoga, what lights you up?** Travel, hanging with my dog, enjoying time with my husband, playing in nature, going to concerts, cooking, meditating, crafting, journaling, reading, and connecting with friends.",
-    ],
-    classes: [
-      "**FLOW 2**: Tuesdays 8:45am (NW), Sundays 12pm (NW)",
-      "**APEX 2**: Tuesdays 12pm (NW)",
     ],
   }),
   personSchema.parse({
@@ -70,9 +59,6 @@ export const directors = [
       "Shortly after completing her Master's degree in early 2021, Emily began working full time at yoga pod, first as an Assistant Manager, then as the Northwest Studio Manager, eventually becoming the Regional Studio Director before being promoted to Director of Operations in 2025. Emily currently teaches FIT, Sweat, Heat, & Beatz, and APEX classes while also overseeing the entire regional operations of both studio locations, the APEX | yoga pod staff, facilitating teacher training, and heading multiple subcommittees including our Athlete Program, Events Team, and Retail Team. She considers this role to be the biggest blessing as it's a combination of everything she loves: movement, community, teaching, and having fun!",
       "FIT was what initially drew Emily to yoga pod, and it's been the class style that's kept her heart all these years later. Now, being the Lead Faculty for the FIT Teacher Training program, Emily recognizes the privilege she has of educating others on proper movement patterns, intelligent sequencing, and the joy of moving to the beat of the music. After taking yoga pod's 200hr Teacher Training in Spring 2021, Emily's respect for FLOW classes grew immensely and she began to slowly identify as a yoga teacher through the Sweat, Heat, & Beatz avenue. Here, the combination of a challenging vinyasa practice combined with the invitation to lean into traditionally non-yogic music feels like home.",
     ],
-    classes: [
-      "**APEX 2**: Mondays 10:30am (NW), Thursdays 5pm (NW)",
-    ],
   }),
   personSchema.parse({
     photo: "amanda-allen",
@@ -80,12 +66,9 @@ export const directors = [
     role: "Program & Facilities Director",
     bio: [
       "**What students should expect from your class?** A challenging yet centering experience. A space to move your body and quiet your mind.",
-      "**What classes you enjoy most and why?** I love HOT! As a 3rd generation Florida girl, I really like being warm :) I also enjoy the repetition of poses which allow me to find something new each time to deepen into. When I'm not taking HOT, you can find me in an APEX class!",
+      "**What classes do you enjoy most and why?** I love HOT! As a 3rd generation Florida girl, I really like being warm :) I also enjoy the repetition of poses which allow me to find something new each time to deepen into. When I'm not taking HOT, you can find me in an APEX class!",
       "**What type of music do you play in your classes?** I enjoy many different genres, but in my HOT classes I like to play a mix of acoustic, instrumental, nature sounds and a sprinkle of current beats.",
       "**When you're not practicing yoga, what lights you up?** Spending time with my family, being outside, visiting a new national park and photographing all of the above!",
-    ],
-    classes: [
-      "**HOT 45**: Mondays 3:45pm (NW)",
     ],
   }),
   personSchema.parse({
@@ -98,9 +81,6 @@ export const directors = [
       "**What type of music do you play in your classes?** I usually like to play chill beats, but I sometimes throw in some jazzy/popular mashups to make the classes just a little more groovy.",
       "**When you're not practicing yoga, what lights you up?** When I’m not practicing yoga, doing anything with my dog, Roxy, lights me up! I love to be outside with her and go on long walks, or stay inside to cuddle with her and watch movies.",
     ],
-    classes: [
-      "**FLOW 1**: Mondays 11:45am (NW)",
-    ],
   }),
   personSchema.parse({
     photo: "ellen-parks",
@@ -111,11 +91,6 @@ export const directors = [
       "**Which APEX | yoga pod class do you enjoy most and why?** HOT, FLOW 2, or FIT. I appreciate the consistency and familiarity of the HOT sequence. FLOW offers a beautiful balance of movement and breath. And FIT, although a more recent passion, I find energizes and allows me to move in a way that feels authentic.",
       "**What type of music do you play in your classes?** For HOT, you’ll hear anything from energizing songs to keep you moving during powerful poses and more meditative music as we wind down. For FIT, expect to hear hip-hop, rap, maybe a bit of EDM, and some throw backs!",
       "**When you're not at the studio, what lights you up?** When I’m not at the studio, you’ll find me spending time with my friends around Gainesville, walking in Depot park, reading, or volunteering!",
-    ],
-    classes: [
-      "**FIT**: Saturdays 8am (NW)",
-      "**HOT**: Saturdays 5pm (SW), Sundays 5:30pm (NW)",
-      "**FLOW 2**: Sundays 8am (NW)",
     ],
   }),
   personSchema.parse({
@@ -133,10 +108,6 @@ export const directors = [
       "**What type of music do you play in your class?** I play a mix of rap, hip-hop, pop and EDM/house. I love a good remix or throwback song! I also love getting song requests from students so I can include music they like too!",
       "**When you’re not in the studio, what lights you up?** When I’m not in the studio I love spending quality time with family and friends. I also love going to concerts, the beach, and cooking!",
     ],
-    classes: [
-      "**APEX 2**: Tuesdays 8am (SW), Wednesdays 6:30am (NW), Fridays 6:30am (NW)",
-      "**FIT**: Tuesdays 9:30am (SW), Wednesdays 8am (NW)",
-    ],
   }),
   personSchema.parse({
     photo: "gia-saint-john",
@@ -147,10 +118,6 @@ export const directors = [
       "**Which APEX | yoga pod class do you enjoy most and why?** My favorite class is APEX 2 because it strikes the perfect balance between challenge and control. It’s strong and athletic, but still deeply intentional — you’re building power while staying connected to your breath and alignment. I love that it pushes people just enough to feel accomplished without feeling overwhelmed.",
       "**What type of music do you play in your classes?** I play mostly rap and hip-hop. I love music that keeps you hype and motivated from start to finish. In my practice, focusing on the music is a great way to push through more challenging exercises — it helps you stay present, confident, and mentally strong when things get tough. The right playlist turns effort into momentum.",
       "**When you're not at the studio, what lights you up?** Outside the studio, I’m energized by travel, wellness, and creative projects. I love exploring new places, spending time in nature, and working on passion projects that blend health and lifestyle.",
-    ],
-    classes: [
-      "**APEX 2**: Wednesdays 12pm (NW), Wednesdays 4:30pm (SW), Wednesdays 5:30pm (SW), Fridays 5pm (NW)",
-      "**APEX 1**: Sundays 11:30am (NW)",
     ],
   }),
   personSchema.parse({
@@ -172,9 +139,6 @@ export const directors = [
       "**Which APEX | yoga pod class do you enjoy most and why?** My favorite style of class is HOT because the set sequence allows me to find a meditative state quickly. I have recently fallen back in love with YIN.",
       "**What type of music do you play in your classes?** Imagine yourself on the couch with a cup of tea on a cozy afternoon and the playlist that would go along with that moment. It starts soft and will build to the peak pose with more upbeat tunes and usually finish with instrumental music.",
       "**When you're not at the studio, what lights you up?** When I am not practicing I enjoy reading, snuggling with my dogs and cats and relaxing at the beach. I will always be a lifelong student whether I am studying wine, practicing French or any new skill I find fascinating.",
-    ],
-    classes: [
-      "**HOT**: Mondays 6:30am (NW), Wednesdays 8:45am (SW)",
     ],
   }),
 ];

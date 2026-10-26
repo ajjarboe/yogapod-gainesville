@@ -22,8 +22,9 @@ export type HeaderPhoto = {
   /**
    * "Zoom out" on wide screens: show the whole photo on the right, fading into the dark
    * background behind the title. Use for a photo whose subject is on the right.
+   * "soft" uses a shorter fade, for a subject that sits left of center in the photo.
    */
-  fitRight?: boolean;
+  fitRight?: boolean | "soft";
 };
 
 /**
@@ -56,7 +57,7 @@ export function PageHeader({
           width={photo.width}
           height={photo.height}
           sizes="100vw"
-          className={["hero-media", photo.focus ? `focus-${photo.focus}` : "", photo.fitRight ? "fit-right" : ""]
+          className={["hero-media", photo.focus ? `focus-${photo.focus}` : "", photo.fitRight ? "fit-right" : "", photo.fitRight === "soft" ? "fit-right-soft" : ""]
             .filter(Boolean)
             .join(" ")}
           priority
