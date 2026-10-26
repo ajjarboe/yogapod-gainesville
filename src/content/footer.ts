@@ -14,9 +14,8 @@ export const footer = {
     {
       heading: "Schedule",
       links: [
-        { href: "/northwest-schedule/", label: "Northwest" },
-        { href: "/southwest-schedule/", label: "Southwest" },
-        { href: site.apex.scheduleHref, label: "APEX NW & SW" },
+        { href: "/northwest-schedule/", label: "yoga pod Gainesville" },
+        { href: site.apex.scheduleHref, label: "APEX Gainesville" },
       ],
     },
     {
