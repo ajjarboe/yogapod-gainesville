@@ -3,7 +3,11 @@ import { personSchema } from "@/content/schema";
 export const story = {
   title: "Our Story",
   /** Label on the tap-to-open "+" row; the story stays closed until someone opens it. */
-  summary: "Read our story",
+  /** Always visible above the "+" row: the hook, written for search (hot yoga, Gainesville, FL, NW and SW). */
+  lede: "yoga pod Gainesville is a locally owned **hot yoga and fitness studio** with locations in Northwest and Southwest Gainesville, FL. Founded in Boulder, Colorado in 2003 and brought home to Gainesville in 2018, we offer FLOW, FIT, HOT and YIN classes and are proud to be part of RAD Collective, home to APEX | RITUAL | yoga pod.",
+  summary: "Read the full story",
+  /** Link under the story to the one RAD Collective story page (mission, vision, values). */
+  more: { href: "https://radcollective.us/about/", label: "Read the full RAD Collective story" },
   paragraphs: [
     "RAD Collective, home to APEX | RITUAL | yoga pod, was born right here in Gainesville, FL, and exists because of what this city taught us.",
     "In 2018, we, Alex and Rae Jarboe, moved to Gainesville with a clear goal: to build a heart-driven, deeply rooted yoga and fitness community. We put down roots in the Oakview neighborhood and committed to showing up as active members of the Gainesville community, not just as studio owners.",

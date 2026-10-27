@@ -35,6 +35,13 @@ export const home = {
       southwest: { text: "Text Southwest", call: "Call Southwest" },
     },
   },
+  /** "Our Story" band near the bottom of home: a short hook that sends people to the full story on Our Team. */
+  storyTeaser: {
+    eyebrow: "Our Story",
+    title: "Locally owned. Rooted in Gainesville.",
+    lede: "yoga pod began as a one-room studio in Boulder, Colorado in 2003. In 2018 we brought it home to Gainesville, FL, built every studio from the heart out, and grew into RAD Collective, home to APEX | RITUAL | yoga pod. Every leader on our team started as a student first.",
+    cta: { href: "/our-team/", label: "Read Our Story" },
+  },
   testimonialsTitle: "What Our Students Say",
   testimonials: [
     {

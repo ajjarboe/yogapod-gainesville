@@ -23,9 +23,9 @@ export const pages = {
   }),
   ourTeam: pageMetaSchema.parse({
     path: "/our-team/",
-    title: "Our Team | yoga pod Gainesville",
+    title: "Our Team and Story | Hot Yoga in Gainesville, FL | yoga pod",
     description:
-      "Locally owned and operated. Meet the owners and directors behind APEX | yoga pod — every one of them started here as a student first.",
+      "Meet the local team behind yoga pod Gainesville, a hot yoga and fitness studio in NW and SW Gainesville, FL since 2018. Every leader started as a student.",
   }),
   culture: pageMetaSchema.parse({
     path: "/culture/",
