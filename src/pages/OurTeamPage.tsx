@@ -1,4 +1,5 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { Disclose } from "@/components/patterns/Disclose";
 import { PageHeader } from "@/components/patterns/PageHeader";
 import { headerPhotos } from "@/content/header-photos";
 import { PersonCard } from "@/components/patterns/PersonCard";
@@ -13,10 +14,8 @@ export function OurTeamPage() {
       <section className="band">
         <div className="shell-narrow">
           <h2 className="display-md">{story.title}</h2>
-          <div className="prose mt-6 text-foreground-soft">
-            {story.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <div className="mt-4">
+            <Disclose summary={story.summary} paragraphs={story.paragraphs} />
           </div>
         </div>
       </section>
