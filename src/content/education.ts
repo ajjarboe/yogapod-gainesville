@@ -126,7 +126,7 @@ export const careers = {
     lede: "We hire from within our student community. Your interview or audition will include questions about classes you have taken, teachers and staff you have connected with, and ways you feel you can contribute to our culture.",
   },
   body: [
-    "If you are looking to become a yoga pod teacher, membership consultant, or karma yogi, check out our $30 for 30 days intro offer to start. If you love your experience, and you can envision yourself uplifting the team average by exemplifying our mission, vision, values, intention, and principles, please come back and fill out an application.",
+    "If you are looking to become a yoga pod teacher, membership consultant, or Karma Crew member, check out our $30 for 30 days intro offer to start. If you love your experience, and you can envision yourself uplifting the team average by exemplifying our mission, vision, values, intention, and principles, please come back and fill out an application.",
     "Taking a teacher training at yoga pod does not guarantee a teaching position at yoga pod. Your availability, the studio schedule needs, staff availability for auditions, and general needs for teacher support determine whether or not auditions will be hosted. If you do not audition directly following a teacher training graduation, there may not be an opportunity to audition again until the next training graduation.",
   ],
   applications: [
@@ -136,7 +136,7 @@ export const careers = {
     },
     { label: "Front Desk Membership Consultant", href: "https://forms.gle/LPG9a3z7BhBNvsXL8" },
     {
-      label: "Karma Yogi",
+      label: "Karma Crew",
       href: "https://docs.google.com/forms/d/e/1FAIpQLSc2G1tHuRdjW_Yn27aE5793DLmVC7D7V0gZmGO-34-suBpYgA/viewform",
     },
   ],

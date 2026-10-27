@@ -1,8 +1,10 @@
 import { SiteChrome } from "@/components/layout/SiteChrome";
+import { Disclose } from "@/components/patterns/Disclose";
 import { PageHeader } from "@/components/patterns/PageHeader";
 import { headerPhotos } from "@/content/header-photos";
 import { PersonCard } from "@/components/patterns/PersonCard";
 import { pages } from "@/content/pages";
+import { RichText } from "@/lib/rich-text";
 import { directors, ownership, story } from "@/content/team";
 
 export function OurTeamPage() {
@@ -13,11 +15,15 @@ export function OurTeamPage() {
       <section className="band">
         <div className="shell-narrow">
           <h2 className="display-md">{story.title}</h2>
-          <div className="prose mt-6 text-foreground-soft">
-            {story.paragraphs.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
+          <p className="lede mt-6 text-foreground-soft">
+            <RichText text={story.lede} />
+          </p>
+          <div className="mt-4">
+            <Disclose summary={story.summary} paragraphs={story.paragraphs} />
           </div>
+          <a className="btn btn-ghost mt-8" href={story.more.href}>
+            {story.more.label} &rarr;
+          </a>
         </div>
       </section>
 

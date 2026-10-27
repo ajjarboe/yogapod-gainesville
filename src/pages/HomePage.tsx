@@ -65,6 +65,17 @@ export function HomePage() {
         </div>
       </section>
 
+      <section className="band band-warm">
+        <div className="shell-narrow text-center">
+          <p className="eyebrow">{home.storyTeaser.eyebrow}</p>
+          <h2 className="display-md mt-3">{home.storyTeaser.title}</h2>
+          <p className="lede mt-5 mb-8">{home.storyTeaser.lede}</p>
+          <a className="btn btn-ghost" href={home.storyTeaser.cta.href}>
+            {home.storyTeaser.cta.label}
+          </a>
+        </div>
+      </section>
+
       <section className="band band-dark">
         <div className="shell grid-2">
           <div className="card-dark flex flex-col justify-between gap-6">
