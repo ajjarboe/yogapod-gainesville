@@ -91,7 +91,7 @@ export const pages = {
     path: "/careers/",
     title: "Careers | yoga pod Gainesville",
     description:
-      "Teacher, membership consultant and karma yogi applications. We hire from within our student community.",
+      "Teacher, membership consultant and Karma Crew applications. We hire from within our student community.",
   }),
   privacyPolicy: pageMetaSchema.parse({
     path: "/privacy-policy/",

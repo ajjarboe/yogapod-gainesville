@@ -12,7 +12,7 @@ export const story = {
     "yoga pod Gainesville SW opened in June 2018 as the first full expression of that vision. Not a franchise: built, owned, and operated by us from day one. Classes filled, waitlists grew, and a strong sense of belonging took hold.",
     "When we expanded to Gainesville's NW side, Rae created APEX in 2019 to bring modern, intelligent Xformer pilates and strength to Gainesville, blending precision and artistry.",
     "Now we are introducing RITUAL, a custom-built contrast therapy club with Finnish saunas and American-made cold plunges, right inside our NW location.",
-    "Today, APEX | RITUAL | yoga pod is locally owned and operated by people who live here and love this city. Every leader on our team began as a student, many as Karma Yogis or teachers, before stepping into leadership. We hire for attitude and aptitude, and we invest deeply in our people.",
+    "Today, APEX | RITUAL | yoga pod is locally owned and operated by people who live here and love this city. Every leader on our team began as a student, many as Karma Crew or teachers, before stepping into leadership. We hire for attitude and aptitude, and we invest deeply in our people.",
     "At our core, we exist to positively impact Gainesville through breath, strength, and sweat. Guided by Kaizen, the principle of continuous improvement, we work to be a magnificent place to work, an incredible place to practice, and a meaningful part of this city.",
   ],
 };
@@ -22,6 +22,10 @@ export const ownership = [
     photo: "alex-jarboe-2026",
     name: "Alex Jarboe",
     role: "Owner",
+    classes: [
+      "**FLOW 2**: Wednesdays 7pm, Fridays 10:15am and Saturdays 10am (NW)",
+      "**Sweat, Heat, & Beatz**: Mondays 5:45pm (SW)",
+    ],
     bio: [
       "Alex is co-founder of RAD Collective, home to APEX | RITUAL | yoga pod, and a lead facilitator of the yoga pod 200-Hour Teacher Training. His path into ownership and leadership grew directly from lived experience—first as a student, then as a teacher, mentor, and builder of community.",
       "Originally from the East Coast, Alex moved to Colorado in 2003 seeking a deeper connection to nature and a slower, more intentional pace of life. It was there that he took his first HOT yoga class—an experience that challenged him physically and opened the door to a practice that would become a moving meditation and lifelong anchor. Before yoga, Alex worked in high-pressure environments, including roles with the U.S. Secret Service and Lloyd's of London. Yoga became the space that quieted his mind, created room to grow, and ultimately reshaped his direction.",
@@ -35,6 +39,10 @@ export const ownership = [
     photo: "rae-jarboe",
     name: "Rae Jarboe",
     role: "Owner",
+    classes: [
+      "**FLOW 2**: Tuesdays 8:45am and Sundays 12pm (NW)",
+      "**APEX 2**: Tuesdays 12pm (NW)",
+    ],
     bio: [
       "**What can students expect in your class?** Hot music, clear guidance, a balance of strength and flexibility, and fun!",
       "**Which yoga pod class do you enjoy most and why?** I love all of our class styles and teach each one. It's so hard to choose when they all have such a perfect balance to one another. I choose them all!",
@@ -55,6 +63,11 @@ export const directors = [
     photo: "emily-tharp-pendley",
     name: "Emily Tharp Pendley",
     role: "Director of Operations",
+    classes: [
+      "**APEX 2**: Mondays 10:30am and Thursdays 5pm (NW)",
+      "**FIT**: Tuesdays 5pm (NW)",
+      "**Sweat, Heat, & Beatz**: Wednesdays 5:45pm (SW)",
+    ],
     bio: [
       "Emily is the Director of Operations at APEX | yoga pod and a lead faculty member in the APEX and FIT Teacher Training Programs. She joined yoga pod in 2019 as a student and quickly fell in love with the challenge the classes provided and the community that the studio attracted.",
       "She took the first public FIT Teacher Training in 2019 while in graduate school at the University of Florida and continued her fitness education by attending one of the pre-opening APEX Teacher Trainings. During these trainings, Emily realized her passion for teaching group fitness classes and made the decision to follow her heart and pursue fitness as a career.",
@@ -66,6 +79,9 @@ export const directors = [
     photo: "amanda-allen",
     name: "Amanda Allen",
     role: "Program & Facilities Director",
+    classes: [
+      "**HOT 45**: Mondays 3:45pm (NW)",
+    ],
     bio: [
       "**What students should expect from your class?** A challenging yet centering experience. A space to move your body and quiet your mind.",
       "**What classes do you enjoy most and why?** I love HOT! As a 3rd generation Florida girl, I really like being warm :) I also enjoy the repetition of poses which allow me to find something new each time to deepen into. When I'm not taking HOT, you can find me in an APEX class!",
@@ -77,6 +93,10 @@ export const directors = [
     photo: "lindsey-guarisco",
     name: "Lindsey Guarisco",
     role: "Accounts Director",
+    classes: [
+      "**FLOW 1**: Mondays 11:45am (NW)",
+      "**HOT FLOW Fusion 60**: Saturdays 10:30am (SW)",
+    ],
     bio: [
       "**What can students expect in your class?** Students can expect to let go and just have fun in FLOW 2! There is always the option to challenge yourself to see what amazing things your body can do and how it moves! We synchronize our breath to our movement in a heated environment while listening to some tunes and getting a lil’ sweaty. Connecting our breath to our movement allows us to achieve a Flow State, a period of hyper-focus in which we find more energy and enjoyment! :)",
       "**Which yoga pod class do you enjoy most and why?** I enjoy taking FLOW 2 and HOT! It’s always so fun to see the creativity and individuality present in the FLOW 2 sequences that our teachers make. I enjoy HOT because it really challenges me not only physically, but mentally as well.",
@@ -88,6 +108,11 @@ export const directors = [
     photo: "ellen-parks",
     name: "Ellen Parks",
     role: "Regional Assistant Director",
+    classes: [
+      "**FIT**: Saturdays 8am (NW)",
+      "**HOT**: Saturdays 5pm (SW)",
+      "**FLOW 2**: Sundays 8am (NW)",
+    ],
     bio: [
       "**What can students expect in your class?** Students can expect a challenging, high energy practice that encourages both physical and mental strength. I aim to create a space where everyone feels welcomed and empowered to show up as they are, move with intention, and leave feeling more connected to themselves and their practice.",
       "**Which APEX | yoga pod class do you enjoy most and why?** HOT, FLOW 2, or FIT. I appreciate the consistency and familiarity of the HOT sequence. FLOW offers a beautiful balance of movement and breath. And FIT, although a more recent passion, I find energizes and allows me to move in a way that feels authentic.",
@@ -104,6 +129,10 @@ export const directors = [
     photo: "sarah-mcquatters",
     name: "Sarah McQuatters",
     role: "Regional Assistant Director + Retail Manager",
+    classes: [
+      "**APEX 2**: Tuesdays 8am (SW), Wednesdays and Fridays 6:30am (NW)",
+      "**FIT**: Tuesdays 9:30am (SW) and Wednesdays 8am (NW)",
+    ],
     bio: [
       "**What can students expect in your class?** Students can expect a lighthearted and supportive environment where they can focus on improving form, strength, and body awareness. Each class offers a challenge to both beginners and long time practitioners! I like to emphasize mindful movement, alignment, and breath to help students create a deeper mind to body connection.",
       "**Which APEX | yoga pod class do you enjoy most?** I have a special place in my heart for every class offered at APEX | yoga pod, but if I had to pick it would be APEX 2 or FIT! I love taking classes with upbeat music and plenty of opportunity to move my body.",
@@ -115,6 +144,10 @@ export const directors = [
     photo: "gia-saint-john",
     name: "Gia Saint John",
     role: "Marketing Manager",
+    classes: [
+      "**APEX 2**: Wednesdays 12pm (NW), Wednesdays 4:30pm and 5:30pm (SW), Fridays 5pm (NW)",
+      "**APEX 1**: Sundays 11:30am (NW)",
+    ],
     bio: [
       "**What can students expect in your class?** Students can expect a thoughtful, challenging class that emphasizes control, alignment, and mind-body connection. I focus on intentional movement — you’ll feel strong, supported, and aware of why you’re doing each exercise. My goal is for students to leave feeling energized, balanced, and more connected to their bodies.",
       "**Which APEX | yoga pod class do you enjoy most and why?** My favorite class is APEX 2 because it strikes the perfect balance between challenge and control. It’s strong and athletic, but still deeply intentional — you’re building power while staying connected to your breath and alignment. I love that it pushes people just enough to feel accomplished without feeling overwhelmed.",
@@ -136,6 +169,9 @@ export const directors = [
     photo: "audrey-lefler",
     name: "Audrey Lefler",
     role: "Karma Crew Manager",
+    classes: [
+      "**HOT**: Mondays 6:30am (NW) and Wednesdays 8:45am (SW)",
+    ],
     bio: [
       "**What can students expect in your class?** Students can expect a welcoming environment for all experience levels. I meet the challenges of a hot practice with a calming presence. My focus is on breath and alignment.",
       "**Which APEX | yoga pod class do you enjoy most and why?** My favorite style of class is HOT because the set sequence allows me to find a meditative state quickly. I have recently fallen back in love with YIN.",
