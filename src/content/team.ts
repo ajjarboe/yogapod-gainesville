@@ -27,7 +27,7 @@ export const ownership = [
     name: "Alex Jarboe",
     role: "Owner",
     classes: [
-      "**FLOW 2**: Wednesdays 7pm, Fridays 10:15am and Saturdays 10am (NW)",
+      "**FLOW 2**: Wednesdays 7pm and Saturdays 10am (NW)",
       "**Sweat, Heat, & Beatz**: Mondays 5:45pm (SW)",
     ],
     bio: [
