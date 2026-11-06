@@ -3,7 +3,7 @@ export const site = {
   brand: "yoga pod Gainesville",
   brandFull: "APEX | yoga pod Gainesville",
   tagline: "Come as you are. Leave feeling refreshed and inspired.",
-  email: "info@yogapod.com",
+  email: "staff@radcollective.us",
   social: {
     instagram: "https://www.instagram.com/yogapodgainesville/",
     facebook: "https://www.facebook.com/yogapodgainesville",
