@@ -1,6 +1,7 @@
 import { NetlifyForm } from "@/components/patterns/NetlifyForm";
 import { RichText } from "@/lib/rich-text";
-import { honeypot, responseWindow, thanksPath } from "@/content/membership-forms";
+import type { FormEvent } from "react";
+import { honeypot, responseWindow, sheetBackup, thanksPath } from "@/content/membership-forms";
 import type { FormField, MembershipForm as MembershipFormContent } from "@/content/schema";
 
 function Field({ field }: { field: FormField }) {
@@ -82,11 +83,32 @@ function Field({ field }: { field: FormField }) {
   );
 }
 
+/** Sends a copy of a membership request to the RAD-owned Google Sheet. Runs
+ *  alongside the normal Netlify post and never stops it, even if it fails. */
+function copyToSheet(event: FormEvent<HTMLFormElement>) {
+  try {
+    const data = new URLSearchParams();
+    new FormData(event.currentTarget).forEach((value, key) => {
+      if (typeof value === "string") data.append(key, value);
+    });
+    data.append("site", sheetBackup.site);
+    navigator.sendBeacon(sheetBackup.url, data);
+  } catch {
+    // The Netlify post still goes through. The sheet copy is only a backup.
+  }
+}
+
 /** Use this for any of the four membership request forms. The shape comes
  *  entirely from src/content/membership-forms.ts. */
 export function MembershipForm({ form }: { form: MembershipFormContent }) {
   return (
-    <NetlifyForm name={form.name} honeypot={honeypot} action={form.thanks ?? thanksPath} className="rform">
+    <NetlifyForm
+      name={form.name}
+      honeypot={honeypot}
+      action={form.thanks ?? thanksPath}
+      className="rform"
+      onSubmit={(sheetBackup.forms as readonly string[]).includes(form.name) ? copyToSheet : undefined}
+    >
       {form.fields.map((field) => (
         <Field key={field.name} field={field} />
       ))}
