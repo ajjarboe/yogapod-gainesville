@@ -13,6 +13,17 @@ export const leadershipEmail = "leadership@radcollective.us";
  *  nobody submits twice thinking it failed. */
 export const responseWindow = "within 4 business days";
 
+/** Every cancel, freeze, upgrade and downgrade request is also copied to the
+ *  RAD-owned Google Sheet "yoga pod GNV – Membership Requests" the moment the member hits send, so nothing
+ *  is lost if Netlify's spam filter holds a real request. The copy goes to the
+ *  Apps Script web app "RAD Membership Requests Backstop" (owner
+ *  rae@radcollective.us). It never blocks or changes the Netlify post. */
+export const sheetBackup = {
+  url: "https://script.google.com/macros/s/AKfycbwLffCEb0rHveScrw-48CX5Q2FFXvKZhu5J1Y0C6AgmL9Bw87TxtdI1eDdqp1Zw6incnQ/exec",
+  site: "yogapod",
+  forms: ["membership-cancel", "membership-freeze", "membership-upgrade", "membership-downgrade"],
+} as const;
+
 const identity = [
   formFieldSchema.parse({
     name: "name",
