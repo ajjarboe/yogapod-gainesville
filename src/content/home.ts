@@ -1,7 +1,7 @@
 export const home = {
   hero: {
     title: "Come as you are. Leave feeling refreshed and inspired.",
-    lede: "Two studios. Over 200 classes a week.",
+    lede: "Two studios. Over 250 classes per week.",
     cta: "Try $30 for 30 days unlimited",
     secondary: { href: "/your-first-class/", label: "Your first class" },
     video: "/video/hero.mp4",

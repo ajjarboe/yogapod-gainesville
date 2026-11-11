@@ -7,7 +7,7 @@ export const pages = {
     path: "/",
     title: "Gainesville Yoga Studio | yoga pod Gainesville",
     description:
-      "Two Gainesville studios, over 200 classes a week. Yoga, HIIT and Pilates for every level. Try $30 for 30 days unlimited — no contracts, no strings attached.",
+      "Two Gainesville studios, over 250 classes per week. Yoga, HIIT and Pilates for every level. Try $30 for 30 days unlimited — no contracts, no strings attached.",
   }),
   ourClasses: pageMetaSchema.parse({
     path: "/our-classes/",
