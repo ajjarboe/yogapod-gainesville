@@ -76,10 +76,21 @@ export function UrgencyBanner() {
           <span className="rbanner-line">
             <RichText text={banner.title} />
           </span>
+          {banner.buttons.map((button) => (
+            <a
+              key={button.label}
+              className="rbanner-cta"
+              href={button.href}
+              target="_blank"
+              rel="noopener"
+            >
+              {button.label}
+            </a>
+          ))}
           {banner.links.map((link) => (
             <a
               key={link.label}
-              className="rbanner-cta"
+              className="rbanner-link"
               href={link.href}
               target="_blank"
               rel="noopener"
