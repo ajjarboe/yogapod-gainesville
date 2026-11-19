@@ -2,11 +2,12 @@
   "hooks": {
     "PostToolUse": [
       {
-        "matcher": "Write|Edit|StrReplace",
+        "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           {
             "type": "command",
-            "command": "yarn lint --fix && yarn typecheck"
+            "command": "cd \"$CLAUDE_PROJECT_DIR\" && { yarn lint --fix && yarn typecheck; } 1>&2 || exit 2",
+            "timeout": 120
           }
         ]
       }
