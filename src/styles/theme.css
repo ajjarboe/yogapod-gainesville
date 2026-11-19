@@ -720,6 +720,24 @@ html[data-theme="dark"] {
 .rbanner-cta:hover {
   opacity: 0.85;
 }
+.rbanner-link {
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+  color: var(--on-dark-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.rbanner-link:hover {
+  color: var(--on-dark);
+}
+.rbanner-line a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  margin-left: 0.4em;
+  white-space: nowrap;
+}
 .rbanner-x {
   position: absolute;
   right: 10px;
